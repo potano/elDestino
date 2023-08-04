@@ -1,0 +1,26 @@
+// Copyright © 2023 Michael Thompson
+// SPDX-License-Identifier: GPL-2.0-or-later
+
+= El Destino
+Toolkit to generate an interactive map
+
+Displays the El Destino plantation in Jefferson County, Florida,
+the Bellamy Road, and various Spanish mission sites.
+
+Uses the Leaflet (https://leafletjs.com) Javascript library to display
+the map.  Uses Open Streetmap (https://osm.org) tiles as a base layer.
+
+Build system requires
+
+- a Make utility (GNU Make tested)
+- a POSIX shell (Bash ver 5.1 tested)
+- GNU coreutils
+- PHP CLI SAPI (ver 8.1 tested; should work with version 5.4 or later)
+
+
+Features to be displayed on the map are determined by the contents of the
+files in the data/ directory.  The files are in a format based on Lisp
+S-Expressions; the filename extension is _.sexp_.  The build processor
+reads these files to generate a _data.js_ file which the client-side
+application reads in preparation to generate the map.
+
