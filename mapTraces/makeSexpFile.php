@@ -1,15 +1,56 @@
 <?php
 
-define('FLOATFMT', '%.6f');
-define('QUOTE_KEYS', TRUE);
+$digits = '6';
+$filename = NULL;
 
-if ($argc < 2) {
+$args = $argv;
+$myself = array_shift($args);
+while ($args) {
+   $arg = array_shift($args);
+   if (substr($arg, 0, 1) == '-') {
+      $parm = $want = NULL;
+      if (substr($arg, 1, 1) == '-') {
+         $parts = explode('=', $arg, 2);
+         $parts[] = NULL;
+         list($arg, $parm) = $parts;
+      }
+      switch ($arg) {
+         case '--digits':
+            $want = 'digits';
+            break;
+         default:
+            fatal("Unknown switch $arg");
+      }
+      if (isset($want)) {
+         if (!isset($parm)) {
+            if (!$args || substr($arg, 0, 1) == '-') {
+               fatal("$arg requires a parameter");
+            }
+            $parm = array_shift($args);
+         }
+         $$want = $parm;
+      }
+   }
+   elseif (!isset($filename)) {
+      $filename = $arg;
+   }
+   else {
+      fatal("Uknown '$arg' argument");
+   }
+}
+
+if (!ctype_digit($digits)) {
+   fatal("--digits switch requires an integer value");
+}
+if (!isset($filename)) {
    fatal("Need an input filename");
 }
-$filename = $argv[1];
 if (!is_file($filename)) {
    fatal("$filename does not exist or is not a file");
 }
+
+define('FLOATFMT', '%.' . $digits . 'f');
+define('QUOTE_KEYS', TRUE);
 
 if (!preg_match('/(.*?)\.(geojson|gpx)$/', basename($filename), $matches)) {
    fatal("Cannot recognize extension of $filename");
@@ -43,11 +84,15 @@ switch ($ext) {
 
 $routesegs = $paths = array();
 foreach ($segments as $segment) {
-   $paths[] = array_merge(array('path', $segment['name']), $segment['points']);
+   $paths[] = array_merge(array($segment['type'], $segment['name']), $segment['points']);
    $routesegs[] = array('segment', $segment['name']);
 }
+$collectionType = 'route';
+if (isset($paths[0][0]) && $paths[0][0] == 'polygon') {
+   $collectionType = 'feature';
+}
 $routes = array(
-   array('route', $basename, $routesegs)
+   array($collectionType, $basename, $routesegs)
 );
 
 $doc = array($routes, $paths);
@@ -72,8 +117,20 @@ function getGeoJsonSegments(& $segments, $json, $basename) {
       }
    }
    elseif ($json['type'] == 'Feature') {
-      if (!isset($json['geometry']) || $json['geometry']['type'] != 'MultiLineString') {
-         fatal("Expecting MultiLineString");
+      if (!isset($json['geometry']['type'])) {
+         fatal("Expecting geometry");
+      }
+      switch ($json['geometry']['type']) {
+         case 'MultiLineString':
+            $geoType = 'path';
+            $numLevels = 1;
+            break;
+         case 'MultiPolygon':
+            $geoType = 'polygon';
+            $numLevels = 2;
+            break;
+         default:
+            fatal("Expecting MultiLineString");
       }
       $name = $basename;
       if (isset($json['properties'])) {
@@ -85,20 +142,33 @@ function getGeoJsonSegments(& $segments, $json, $basename) {
             $name .= '_' . $properties['source'];
          }
       }
-      $segment = array();
-      foreach ($json['geometry']['coordinates'] as $pairs) {
-         foreach ($pairs as $pair) {
-            list($long, $lat) = $pair;
-            $segment[] = $lat;
-            $segment[] = $long;
+      $groups = $json['geometry']['coordinates'];
+      if ($numLevels == 1) {
+         foreach ($groups as $pairs) {
+            $segments[] = getGeoJsonSegment($geoType, $name, $pairs);
          }
       }
-      $segment = array('name' => $name, 'points' => $segment);
-      $segments[] = $segment;
+      elseif ($numLevels == 2) {
+         foreach ($groups as $group) {
+            foreach ($group as $px => $pairs)
+               $gname = $name . '_' . ($px + 1);
+               $segments[] = getGeoJsonSegment($geoType, $gname, $pairs);
+         }
+      }
    }
    else {
       fatal("Can't use {$json['type']} GeoJSON object");
    }
+}
+
+function getGeoJsonSegment($type, $name, $pairs) {
+   $segment = array();
+   foreach ($pairs as $pair) {
+      list($long, $lat) = $pair;
+      $segment[] = $lat;
+      $segment[] = $long;
+   }
+   return array('type' => $type, 'name' => $name, 'points' => $segment);
 }
 
 
@@ -120,7 +190,7 @@ function getGpxSegments(& $segments, $doc, $basename) {
             $segment[] = (float) $trkpt['lat'];
             $segment[] = (float) $trkpt['lon'];
          }
-         $segment = array('name' => $name, 'points' => $segment);
+         $segment = array('type' => 'path', 'name' => $name, 'points' => $segment);
          $segments[] = $segment;
       }
    }
@@ -166,7 +236,7 @@ function printSexp($doc, $indent) {
       echo "\n";
       $keys = array_keys($doc);
       $indexed = TRUE;
-      if ($doc[0] == 'path' && is_float($doc[$next])) {
+      if (($doc[0] == 'path' || $doc[0] == 'polygon') && is_float($doc[$next])) {
          foreach (array_slice($doc, $next) as $i => $val) {
             $odd = $i & 1;
             if (!$odd) {
