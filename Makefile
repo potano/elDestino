@@ -7,8 +7,8 @@ web: index.html data.js
 index.html: index_template.html.sh app.js data.js local.css vendor/dommyAll.js vendor/leaflet/leaflet.js vendor/leaflet/leaflet.css
 	./index_template.html.sh
 
-data.js: data php
-	php php/makeData.php -d data/ -g data.js
+data.js: data
+	misiones -d data/ -g data.js
 
 .phony: clean
 clean:

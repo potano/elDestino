@@ -44,9 +44,6 @@
       if (obj.style) {
          style = objMerge(style, obj.style);
       }
-      if (obj.attestation) {
-         style = objMerge(style, obj.attestation);
-      }
       switch (obj.t) {
          case 'feature':
          case 'route':
