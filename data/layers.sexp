@@ -10,7 +10,7 @@
   )
   (layer MissionsLayer
          (menuitem "Missions")
-         (features aspalagaMission)
+         (features aspalagaMission PotohiribaIMission)
   )
   (layer CentralFloridaRailroadLayer
          (menuitem "Central Florida Railroad")

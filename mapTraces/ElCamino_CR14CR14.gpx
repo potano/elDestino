@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<gpx version="1.1" creator="OsmAndRouterV2" xmlns="http://www.topografix.com/GPX/1/1" xmlns:osmand="https://osmand.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name>ElCamino_CR14CR14</name>
+  </metadata>
+  <trk>
+    <name>ElCamino_CR14CR14</name>
+    <trkseg>
+      <trkpt lat="30.3500259" lon="-83.507562" />
+      <trkpt lat="30.350151" lon="-83.5067757" />
+      <trkpt lat="30.3502567" lon="-83.5060738" />
+      <trkpt lat="30.3503653" lon="-83.5053784" />
+      <trkpt lat="30.3504626" lon="-83.5047989" />
+      <trkpt lat="30.350546" lon="-83.5042547" />
+      <trkpt lat="30.3506238" lon="-83.5037525" />
+      <trkpt lat="30.3507072" lon="-83.5032373" />
+      <trkpt lat="30.3507906" lon="-83.5028252" />
+      <trkpt lat="30.3508823" lon="-83.5023777" />
+      <trkpt lat="30.3510047" lon="-83.5018754" />
+      <trkpt lat="30.3511575" lon="-83.5014311" />
+      <trkpt lat="30.3513188" lon="-83.5010383" />
+      <trkpt lat="30.3514494" lon="-83.5007195" />
+      <trkpt lat="30.3515717" lon="-83.5004394" />
+      <trkpt lat="30.3516774" lon="-83.500243" />
+      <trkpt lat="30.3518692" lon="-83.4998889" />
+      <trkpt lat="30.3520248" lon="-83.4996184" />
+      <trkpt lat="30.3522" lon="-83.4993447" />
+      <trkpt lat="30.3524251" lon="-83.4990324" />
+      <trkpt lat="30.3526392" lon="-83.4987459" />
+      <trkpt lat="30.3530224" lon="-83.4983033" />
+      <trkpt lat="30.3534643" lon="-83.4978397" />
+      <trkpt lat="30.3537979" lon="-83.4975242" />
+      <trkpt lat="30.3543705" lon="-83.4970863" />
+      <trkpt lat="30.3549987" lon="-83.4966001" />
+      <trkpt lat="30.3555184" lon="-83.4961816" />
+      <trkpt lat="30.3560788" lon="-83.4957115" />
+      <trkpt lat="30.3567181" lon="-83.4952028" />
+      <trkpt lat="30.3573352" lon="-83.4947263" />
+      <trkpt lat="30.3579244" lon="-83.4942562" />
+      <trkpt lat="30.3584958" lon="-83.4938055" />
+      <trkpt lat="30.3591184" lon="-83.4933161" />
+      <trkpt lat="30.359691" lon="-83.4928331" />
+      <trkpt lat="30.3601802" lon="-83.4924274" />
+      <trkpt lat="30.3606694" lon="-83.4919767" />
+      <trkpt lat="30.3610418" lon="-83.4916032" />
+      <trkpt lat="30.3613921" lon="-83.4911846" />
+      <trkpt lat="30.3616978" lon="-83.4907597" />
+      <trkpt lat="30.3619424" lon="-83.4903797" />
+      <trkpt lat="30.3621926" lon="-83.4899483" />
+      <trkpt lat="30.362458" lon="-83.4894653" />
+      <trkpt lat="30.3626582" lon="-83.4889953" />
+      <trkpt lat="30.3628249" lon="-83.4885381" />
+      <trkpt lat="30.3630084" lon="-83.4880487" />
+      <trkpt lat="30.3631251" lon="-83.4875529" />
+      <trkpt lat="30.3632641" lon="-83.4869798" />
+      <trkpt lat="30.3634308" lon="-83.4863358" />
+      <trkpt lat="30.3635976" lon="-83.485598" />
+      <trkpt lat="30.3637477" lon="-83.4849541" />
+      <trkpt lat="30.3639089" lon="-83.4843037" />
+    </trkseg>
+  </trk>
+</gpx>

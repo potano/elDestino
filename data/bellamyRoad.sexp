@@ -6,7 +6,8 @@
            ;Data digitized with tablet using OSMAnd
            ;Data transferred via .gpx file
            (attestation old_map marker medium)
-           (paths cr360_SanPedroEbb BellamyInterpolationEbb federalRoadEbbUS27 us27federalLamont
+           (paths CR14CR360N_wpPotohiriba1CR14 wpPotohiriba1CR14_CR14CR360S
+                  cr360_SanPedroEbb BellamyInterpolationEbb federalRoadEbbUS27 us27federalLamont
                   bellamyLamont interpolationUS27BarberHill us27BarberHillAvalon
                   interpolationEasternAvalonSideUS27 easternAvalonSideMain
                   interpolationEastAvalonSideWestAvalonSide westernAvalonSide
@@ -55,6 +56,67 @@
            (attestation old_map low)
            (paths LafayetteCapitol)
          )
+)
+
+(path CR14CR360N_wpPotohiriba1CR14
+      (attestation modern_path)
+      30.363909 -83.484304
+      30.363748 -83.484954
+      30.363598 -83.485598
+      30.363431 -83.486336
+      30.363264 -83.486980
+      30.363125 -83.487553
+      30.363008 -83.488049
+      30.362825 -83.488538
+      30.362658 -83.488995
+)
+
+(path wpPotohiriba1CR14_CR14CR360S
+      (attestation modern_path)
+      30.362658 -83.488995
+      30.362458 -83.489465
+      30.362193 -83.489948
+      30.361942 -83.490380
+      30.361698 -83.490760
+      30.361392 -83.491185
+      30.361042 -83.491603
+      30.360669 -83.491977
+      30.360180 -83.492427
+      30.359691 -83.492833
+      30.359118 -83.493316
+      30.358496 -83.493805
+      30.357924 -83.494256
+      30.357335 -83.494726
+      30.356718 -83.495203
+      30.356079 -83.495711
+      30.355518 -83.496182
+      30.354999 -83.496600
+      30.354371 -83.497086
+      30.353798 -83.497524
+      30.353464 -83.497840
+      30.353022 -83.498303
+      30.352639 -83.498746
+      30.352425 -83.499032
+      30.352200 -83.499345
+      30.352025 -83.499618
+      30.351869 -83.499889
+      30.351677 -83.500243
+      30.351572 -83.500439
+      30.351449 -83.500720
+      30.351319 -83.501038
+      30.351157 -83.501431
+      30.351005 -83.501875
+      30.350882 -83.502378
+      30.350791 -83.502825
+      30.350707 -83.503237
+      30.350624 -83.503753
+      30.350546 -83.504255
+      30.350463 -83.504799
+      30.350365 -83.505378
+      30.350257 -83.506074
+      30.350151 -83.506776
+      30.350026 -83.507562
+      30.350075 -83.507595
 )
 
 (path cr360_SanPedroEbb

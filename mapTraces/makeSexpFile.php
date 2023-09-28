@@ -2,6 +2,7 @@
 
 $digits = '6';
 $filename = NULL;
+$reverse = FALSE;
 
 $args = $argv;
 $myself = array_shift($args);
@@ -17,6 +18,9 @@ while ($args) {
       switch ($arg) {
          case '--digits':
             $want = 'digits';
+            break;
+         case '--reverse':
+            $reverse = TRUE;
             break;
          default:
             fatal("Unknown switch $arg");
@@ -94,6 +98,20 @@ if (isset($paths[0][0]) && $paths[0][0] == 'polygon') {
 $routes = array(
    array($collectionType, $basename, $routesegs)
 );
+
+if ($reverse) {
+   foreach ($paths as $pathsX => $pathSet) {
+      for ($i = 2, $j = count($pathSet) - 2; $i < $j; $i += 2, $j -= 2) {
+         $lat = $pathSet[$i];
+         $long = $pathSet[$i+1];
+         $pathSet[$i] = $pathSet[$j];
+         $pathSet[$i+1] = $pathSet[$j+1];
+         $pathSet[$j] = $lat;
+         $pathSet[$j+1] = $long;
+      }
+      $paths[$pathsX] = $pathSet;
+   }
+}
 
 $doc = array($routes, $paths);
 //print_r($doc); exit(0);

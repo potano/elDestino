@@ -79,8 +79,7 @@
             geo.setStyle(style);
             break;
          case 'point':
-            geo = L.point(obj.coords[0], obj.coords[1]);
-            break;
+            return;
          case 'circle':
             var fn = obj.asPixels ? L.circleMarker : L.circle;
             geo = fn([obj.coords[0], obj.coords[1]], {radius: obj.radius});
