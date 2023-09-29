@@ -1,5 +1,8 @@
 (config
 
+  (lengthUnit league 3 miles)
+  (lengthUnit leagues 1 league)
+
   (baseStyle elDestinoStyle
              "color=#1f78b4"
              "opacity=0.9"

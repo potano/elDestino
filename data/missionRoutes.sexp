@@ -7,7 +7,7 @@
                 30.365367 -83.484617
         )
 
-        (route Potohiriba1SantaElena
+        (route Potohiriba1_Machaba
                ; In 1675: 1.5 to 2 leagues from Santa Elena de Machaba
 
                (segment
@@ -40,6 +40,41 @@
         (marker MachabaHigh
                 30.359697 -83.571973
         )
-)
 
+        (route Potohiriba_Asile         ;prelimiinary route definition to calibrate distances
+               ;rough calculation: Potohiriba-Machaba 1.5-2 leagues, Machaba-Tolpatafi 3.5-4,
+               ; Tolpatafi-Asile 2-2.5 leagues.  Range 7 to 8.5 leagues
+               ;Given calculated length of 22.48 miles, this yields a league of 2.64 to 3.21
+               ; miles.  More calibrations will be necessary.  For now we'll use a standard
+               ; league of 3 miles
+               (lengthRange 7 8.5 leagues)
+               (segment
+                   (style roadOfInterest)
+                   (point
+                           30.36860 -83.49288
+                   )
+                   (paths Potohiriba1CR14)
+               )
+               (segment
+                   (style invisiblePath)
+                   (paths wpPotohiriba1CR14_CR14CR360S
+                          cr360_SanPedroEbb BellamyInterpolationEbb federalRoadEbbUS27 us27federalLamont
+                   )
+               )
+               (segment
+                   (style roadOfInterest)
+                   (path
+                         (attestation guess)
+                         30.373066 -83.809215
+                         30.37223  -83.81122
+                   )
+                   (circle Asile
+                           (style indefiniteAreaStyle)
+                           (popup "San Miguel de Asile")
+                           30.37223  -83.81122
+                           (radius 800)
+                   )
+               )
+        )
+)
 
