@@ -22,6 +22,9 @@
              "opacity=0.6"
              "width=5"
   )
+  (baseStyle invisiblePath
+             "hidePath=true"
+  )
   (baseStyle railroad
              "color=#000000"
              "opacity=0.9"

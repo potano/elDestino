@@ -73,17 +73,20 @@
             geo = L.marker(toPair(obj.coords), {icon: icon});
             break;
          case 'path':
+            if (style.hidePath) {
+               return;
+            }
+            // fall through
          case 'polygon':
          case 'rectangle':
             geo = makers[obj.t](toPairs(obj.coords));
             geo.setStyle(style);
             break;
-         case 'point':
-            return;
          case 'circle':
             var fn = obj.asPixels ? L.circleMarker : L.circle;
             geo = fn([obj.coords[0], obj.coords[1]], {radius: obj.radius});
             geo.setStyle(style);
+            break;
          default:
             console.log("Unknown item type " + obj.t);
       }
