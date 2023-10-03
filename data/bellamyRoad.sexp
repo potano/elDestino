@@ -6,7 +6,7 @@
            ;Data digitized with tablet using OSMAnd
            ;Data transferred via .gpx file
            (attestation old_map marker medium)
-           (paths CR14CR360N_wpPotohiriba1CR14 wpPotohiriba1CR14_CR14CR360S
+           (paths Bellamy_CR14
                   cr360_SanPedroEbb BellamyInterpolationEbb federalRoadEbbUS27 us27federalLamont
                   bellamyLamont interpolationUS27BarberHill us27BarberHillAvalon
                   interpolationEasternAvalonSideUS27 easternAvalonSideMain
@@ -58,7 +58,7 @@
          )
 )
 
-(path CR14CR360N_wpPotohiriba1CR14
+(path Bellamy_CR14
       (attestation modern_path)
       30.363909 -83.484304
       30.363748 -83.484954
@@ -69,10 +69,6 @@
       30.363008 -83.488049
       30.362825 -83.488538
       30.362658 -83.488995
-)
-
-(path wpPotohiriba1CR14_CR14CR360S
-      (attestation modern_path)
       30.362658 -83.488995
       30.362458 -83.489465
       30.362193 -83.489948

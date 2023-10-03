@@ -26,10 +26,10 @@
                )
                (segment
                    (style invisiblePath)
-                   (point wpPotohiriba1CR14
+                   (point wpPotohiriba1_Bellamy
                           30.362658 -83.488995
                    )
-                   (paths wpPotohiriba1CR14_CR14CR360S cr360_SanPedroEbb)
+                   (paths Bellamy_CR14 cr360_SanPedroEbb)
                )
         )
 
@@ -50,15 +50,13 @@
                (lengthRange 7 8.5 leagues)
                (segment
                    (style roadOfInterest)
-                   (point
-                           30.36860 -83.49288
-                   )
-                   (paths Potohiriba1CR14)
+                   (paths Potohiriba1CR14 wpPotohiriba1_Bellamy)
                )
                (segment
                    (style invisiblePath)
-                   (paths wpPotohiriba1CR14_CR14CR360S
-                          cr360_SanPedroEbb BellamyInterpolationEbb federalRoadEbbUS27 us27federalLamont
+                   (paths wpPotohiriba1_Bellamy Bellamy_CR14
+                          cr360_SanPedroEbb BellamyInterpolationEbb federalRoadEbbUS27
+                          us27federalLamont
                    )
                )
                (segment
