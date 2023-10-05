@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<gpx version="1.1" creator="OsmAndRouterV2" xmlns="http://www.topografix.com/GPX/1/1" xmlns:osmand="https://osmand.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name>Hopewell_CR14</name>
+  </metadata>
+  <trk>
+    <name>Hopewell_CR14</name>
+    <trkseg>
+      <trkpt lat="30.3821496" lon="-83.4447566" />
+      <trkpt lat="30.3820155" lon="-83.4448651" />
+      <trkpt lat="30.3817312" lon="-83.4450948" />
+      <trkpt lat="30.3813114" lon="-83.4454343" />
+      <trkpt lat="30.3810989" lon="-83.4456066" />
+      <trkpt lat="30.3803227" lon="-83.4462529" />
+      <trkpt lat="30.3792666" lon="-83.4471076" />
+      <trkpt lat="30.378539" lon="-83.4478372" />
+      <trkpt lat="30.3779466" lon="-83.4485544" />
+      <trkpt lat="30.3762444" lon="-83.451105" />
+      <trkpt lat="30.3745704" lon="-83.4536132" />
+      <trkpt lat="30.3728901" lon="-83.4561446" />
+      <trkpt lat="30.3715731" lon="-83.4581196" />
+      <trkpt lat="30.3700307" lon="-83.460771" />
+      <trkpt lat="30.3694953" lon="-83.4619839" />
+      <trkpt lat="30.3688697" lon="-83.4638076" />
+      <trkpt lat="30.3688391" lon="-83.4639074" />
+      <trkpt lat="30.368089" lon="-83.4670154" />
+      <trkpt lat="30.3660942" lon="-83.4753343" />
+      <trkpt lat="30.3639176" lon="-83.4842972" />
+    </trkseg>
+  </trk>
+</gpx>
