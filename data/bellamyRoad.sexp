@@ -1,7 +1,7 @@
 ;SPDX-License-Identifier: GPL-2.0-or-later
 (route bellamyRoad
          (style bellamyRoadStyle)
-         (popup "<b>Bellamy Road</b><br>Lake Sampala (San Pedro de Potiriba) to the state capitol")
+         (popup "<b>Bellamy Road</b><br>Lake Sampala (San Pedro de Potohiriba) to the state capitol")
          (segment
            ;Data digitized with tablet using OSMAnd
            ;Data transferred via .gpx file
@@ -18,7 +18,7 @@
            ;Data digitized with tablet using OSMAnd
            ;Data transferred via .gpx file
            (attestation old_map high)
-           (popup "<b>Bellamy Road</b><br>San Pedro de Potiriba to Lamont")
+           (popup "<b>Bellamy Road</b><br>San Pedro de Potohiriba to Lamont")
            (paths StAugustineRoadWaukennahElDestino)
          )
 
@@ -1034,8 +1034,8 @@
       30.367858 -83.804610
       30.368525 -83.805200
       30.369322 -83.805887
-      30.370026 -83.806435
-      30.370559 -83.806928
+      30.370026 -83.806435      ;Madison County at the Aucilla River crossing
+      30.370559 -83.806928      ;Jefferson County
       30.371040 -83.807334
       30.371976 -83.808160
       30.372793 -83.808870
@@ -1971,8 +1971,8 @@
       30.406586 -84.073722
       30.407093 -84.074063
       30.407729 -84.074514
-      30.408212 -84.074910
-      30.408683 -84.075457
+      30.408212 -84.074910      ;Jefferson County
+      30.408683 -84.075457      ;Leon County
       30.409225 -84.076030
       30.409767 -84.076631
       30.410238 -84.077123
