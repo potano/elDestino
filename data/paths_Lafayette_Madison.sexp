@@ -155,6 +155,7 @@
       30.395979 -83.356463
       30.397021 -83.357328
       30.397588 -83.357811
+      30.398132 -83.358339
 )
 
 (path Bellamy_OldStAugustineMadisonInterpolation
