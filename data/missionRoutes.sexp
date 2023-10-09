@@ -21,6 +21,41 @@
 ;  88  San Luís de Talimali (1655)
 ;  90  San Cosmé y San Damián de Escambé (1655)
 
+(feature SanMartinDeAyaocutoI
+         ;Milanich places this mission at Ichetucknee
+         ;The 1655 listing placed Ayaocuto 8 leagues from Guacara I; measured as 28.23 miles
+         ;This gives a league of 3.53 miles.
+         (route AyaocutoI_GuacaraI
+                (circle
+                  (popup "San Martín de Ayaocuto I (1610)")
+                  (style indefiniteAreaStyle)
+                  29.97609 -82.75746
+                  (radius 200)
+                )
+                (segment AyaocutoI_Bellamy
+                         (style roadOfInterest)
+                         (path
+                           29.97609 -82.75746
+                           29.978972 -82.751931
+                         )
+                         (point wpAyaocutoI_Bellamy 29.978972 -82.751931)
+                )
+                (routeSegments bellamyRoad wpAyaocutoI_Bellamy wpSanJuanDeGuacaraI)
+         )
+)
+
+
+(feature SanJuanDeGuacaraI
+         ;Milanich places the first site at Baptizing Spring
+         (circle wpSanJuanDeGuacaraI
+                 (style indefiniteAreaStyle)
+                 (popup "San Juan de Guacara I")
+                 30.134163 -83.131733
+                 (radius 150)
+         )
+)
+
+
 (feature SanJuanDeGuacaraII
          ;Well-attested location was at Charles Spring on the Suwannee
          ;Unfortunately, no distance from St. Augustine was noted
@@ -28,11 +63,8 @@
          ;Apalachee's lieutenant in 1675 placed it 9 leages from Potohiriba and 8 from Tarihica
          ;Bp. Calderón the same year gave the distances as 10 and 7 leagues
          ;Measured length: 28.04 miles.  Lieutenant league: 3.12 mi.  Calderón league: 4 to 2.8 mi.
-         (marker
-           (popup "San Juan De Guacara II")
-           30.16658 -83.23013
-         )
          (circle 30.16658 -83.23013
+                 (popup "San Juan De Guacara II")
                  (style indefiniteAreaStyle)
                  (radius 100)
          )
@@ -40,9 +72,9 @@
            (style roadOfInterest)
            (path
                  30.16658 -83.23013
-                 30.165910 -83.231695
+                 30.166155 -83.230063
            )
-           (point wpBellamyGuacaraII 30.165910 -83.231695)
+           (point wpBellamyGuacaraII 30.166155 -83.230063)
          )
          (route SanJuanDeGuacaraII_Potohiriba
                 (segments SanJuanDeGuacaraII_Bellamy)
@@ -60,6 +92,7 @@
 
         (route Potohiriba1_Machaba
                ; In 1675: 1.5 to 2 leagues from Santa Elena de Machaba
+               (lengthRange 1.5 2 leagues)
 
                (segment PotohiribaI_Bellamy
                    (style roadOfInterest)
@@ -76,13 +109,9 @@
                    )
                    (point wpPotohiriba1_Bellamy 30.362658 -83.488995)
                )
-               (routeSegments bellamyRoad wpPotohiriba1_Bellamy MachabaHigh)
+               (routeSegments bellamyRoad wpPotohiriba1_Bellamy wpMachabaI_BellamyEast)
         )
 
-
-        (marker MachabaLow
-                30.356308 -83.547956
-        )
         (marker MachabaHigh
                 30.359697 -83.571973
         )
@@ -120,5 +149,31 @@
                    )
                )
         )
+)
+
+
+(feature MachabaIMission
+         (circle MachabaI
+                 (style indefiniteAreaStyle)
+                 (popup "Santa Elena de Machaba (1655)")
+                 30.36349 -83.55167
+                 (radius 550)
+         )
+         (segment MachabaI_BellamyEast
+                  (paths MachabaI)
+                  (path
+                    (attestation guess)
+                    30.36349 -83.55167
+                    30.36267 -83.55021
+                    30.36164 -83.54922
+                    30.35979 -83.54875
+                    30.35927 -83.54772
+                    30.35819 -83.54635
+                    30.35742 -83.54497
+                    30.35679 -83.54437
+                    30.356345 -83.544089
+                  )
+                  (point wpMachabaI_BellamyEast 30.356345 -83.544089)
+         )
 )
 

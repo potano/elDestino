@@ -2,6 +2,13 @@
 (route bellamyRoad
          (style bellamyRoadStyle)
          (popup "<b>Bellamy Road</b><br>Lake Sampala (San Pedro de Potohiriba) to the state capitol")
+
+         (segment
+           ;Data digitized with tablet using OSMAnd guided by topographic map
+           (attestation old_map medium)
+           (paths BellamyRoad_CR238 Bellamy_Ichetucknee BellamyRoad_SpanishRoad BellamyRoad_260th_CharlesSpring)
+         )
+
          (segment
            ;Data digitized with tablet using OSMAnd
            ;Data transferred via .gpx file

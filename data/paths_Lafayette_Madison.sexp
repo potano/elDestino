@@ -4,7 +4,8 @@
 
 (path Bellamy_CharlesSpring_CR53
       (attestation guess)
-      30.165910 -83.231695
+      30.165955 -83.231280      ;county line in mid river
+      30.165910 -83.231695      ;Lafayette County
       30.165916 -83.232384
       30.165910 -83.233756
       30.165916 -83.235056

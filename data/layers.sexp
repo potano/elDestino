@@ -10,7 +10,9 @@
   )
   (layer MissionsLayer
          (menuitem "Missions")
-         (features aspalagaMission SanJuanDeGuacaraII PotohiribaIMission)
+         (features SanMartinDeAyaocutoI SanJuanDeGuacaraI SanJuanDeGuacaraII PotohiribaIMission MachabaIMission
+                   aspalagaMission
+         )
   )
   (layer CentralFloridaRailroadLayer
          (menuitem "Central Florida Railroad")
