@@ -4,9 +4,27 @@
          (popup "<b>Bellamy Road</b><br>Lake Sampala (San Pedro de Potohiriba) to the state capitol")
 
          (segment
+           ;Data digitized in QGIS with trace from topographic map
+           ;Trace around Newnansville conforms with old maps of the town
+           ;Data transferred via .geojson file
+           (attestation old_map marker high)
+           (paths Bellamy_Newnansville)
+         )
+
+         (segment
+           ;Data digitized in QGIS with trace from topographic map
+           ;Trace around Newnansville conforms with old maps of the town
+           ;Data transferred via .geojson file
+           (attestation old_map)
+           (paths Bellamy_WofNewnansville_AlligatorRoad Bellamy_Alligator Bellamy_I75 Bellamy_Traxler_OLeno)
+         )
+
+         (segment
            ;Data digitized with tablet using OSMAnd guided by topographic map
            (attestation old_map medium)
-           (paths BellamyRoad_CR238 Bellamy_Ichetucknee BellamyRoad_SpanishRoad BellamyRoad_260th_CharlesSpring)
+           (paths OLeno_FigSpring
+                  BellamyRoad_CR238 Bellamy_Ichetucknee BellamyRoad_SpanishRoad BellamyRoad_260th_CharlesSpring
+           )
          )
 
          (segment

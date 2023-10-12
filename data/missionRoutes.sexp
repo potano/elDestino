@@ -1,37 +1,37 @@
 ;SPDX-License-Identifier: GPL-2.0-or-later
 
+(feature missionRoutes
 
-;Yardstick along El Camino Real: leagues from St. Augustine
-;  25  San Francisco de Potano (1655)
-;  30  Santa Fé de Toloco
-;  34  San Martín de Ayaocuto (1655)
-;   ?  San Juan de Guacara I
-;   ?  San Juan de Guacara II (@ Charles Spring)
-;  54  Santa Cruz de Tarihica
-;  60  San Pedro y San Pablo de Potohiriba
-;  64  Santa Elena de Machaba
-;  75  San Miguel de Asile (1655)
-;  75  San Lorenzo de Ivitachuco
-;  77  Concepcíon de Ayubale
-;  77  San Francisco de Oconi
-;  84  San Joseph de Ocuia (1655)
-;  86  San Juan de Aspalaga (1655)
-;  87  San Pedro y San Pablo de Patale (1655)
-;  87  San Martín de Tomole (1655)
-;  88  San Luís de Talimali (1655)
-;  90  San Cosmé y San Damián de Escambé (1655)
+         ;San Francisco de Potano
+         (route Potano_TolocoI
+                (style roadOfInterest)
+                (attestation guess)
+                (segment
+                  (paths sanFranciscoDePotanoMission
+                         Potano_TolocoI_West
+                         wpTolocoII
+                  )
+                )
+         )
 
-(feature SanMartinDeAyaocutoI
-         ;Milanich places this mission at Ichetucknee
+
+         ;Santa Fé de Toloco I
+         ;(connecting path not yet worked out)
+
+
+         ;Santa Fé de Toloco II
+         (route TolocoII_Ayaocuto
+                ;trial run for measuring hypothesized second site of Santa Fé de Toloco
+                (routeSegments bellamyRoad wpTolocoII wpAyaocutoI_Bellamy)
+         )
+
+
+         ;San Martín de Ayaocuto
+         ;Known with high certainty to be at Fig Spring in Ichetucknee State Park
+         ;Mission perished in Timuquan revolt of 1656 without having moved
          ;The 1655 listing placed Ayaocuto 8 leagues from Guacara I; measured as 28.23 miles
          ;This gives a league of 3.53 miles.
-         (route AyaocutoI_GuacaraI
-                (circle
-                  (popup "San Martín de Ayaocuto I (1610)")
-                  (style indefiniteAreaStyle)
-                  29.97609 -82.75746
-                  (radius 200)
-                )
+         (route Ayaocuto_GuacaraI
                 (segment AyaocutoI_Bellamy
                          (style roadOfInterest)
                          (path
@@ -42,33 +42,41 @@
                 )
                 (routeSegments bellamyRoad wpAyaocutoI_Bellamy wpSanJuanDeGuacaraI)
          )
-)
-
-
-(feature SanJuanDeGuacaraI
-         ;Milanich places the first site at Baptizing Spring
-         (circle wpSanJuanDeGuacaraI
-                 (style indefiniteAreaStyle)
-                 (popup "San Juan de Guacara I")
-                 30.134163 -83.131733
-                 (radius 150)
+         ;Alternatively, use the 3-league mile and set Guacara I at Royal Spring (22.8 miles)
+         (route Ayaocuto_GuacaraIAlternate
+                (segments AyaocutoI_Bellamy)
+                (routeSegments bellamyRoad wpAyaocutoI_Bellamy wpGuacaraIAlternate)
          )
-)
 
 
-(feature SanJuanDeGuacaraII
+
+         ;Alternate San Juan de Guacara I at Royal Spring instead of Baptizing Spring
+         (route GuacaraIAlternate_Tarihica
+                ;Apalachee's Lieutenant (1675) placed Tarihica 8 leagues from Guacara
+                (lengthRange 7.5 8.5 leagues)
+                ;Trial route to test assertion that Guacara I is at Royal Spring rather than
+                ;Baptizing Spring
+                (routeSegments bellamyRoad wpGuacaraIAlternate wpTarihicaBellamy)
+                (segments Tarihica_Bellamy)
+         )
+
+
+
+         ;San Juan de Guacara I at Baptizing Spring
+         (route GuacaraI_Tarihica
+                ;Test assertion of equistance between Guacara I and Tarihica
+                (routeSegments bellamyRoad wpSanJuanDeGuacaraI wpTarihicaBellamy)
+                (segments Tarihica_Bellamy)
+         )
+
+
+         ;San Juan de Guacara II
          ;Well-attested location was at Charles Spring on the Suwannee
          ;Unfortunately, no distance from St. Augustine was noted
-         ;Milanich places the mission at Charles Spring, six miles from Baptising Spring
-         ;Apalachee's lieutenant in 1675 placed it 9 leages from Potohiriba and 8 from Tarihica
-         ;Bp. Calderón the same year gave the distances as 10 and 7 leagues
-         ;Measured length: 28.04 miles.  Lieutenant league: 3.12 mi.  Calderón league: 4 to 2.8 mi.
-         (circle 30.16658 -83.23013
-                 (popup "San Juan De Guacara II")
-                 (style indefiniteAreaStyle)
-                 (radius 100)
-         )
          (segment SanJuanDeGuacaraII_Bellamy
+           ;Apalachee's lieutenant in 1675 placed it 9 leages from Potohiriba and 8 from Tarihica
+           ;Bp. Calderón the same year gave the distances as 10 and 7 leagues
+           ;Measured length: 28.04 miles.  Lieutenant league: 3.12 miles  Calderón league: 4 to 2.8
            (style roadOfInterest)
            (path
                  30.16658 -83.23013
@@ -76,32 +84,39 @@
            )
            (point wpBellamyGuacaraII 30.166155 -83.230063)
          )
+         (route GuacaraII_BaptizingSpring
+                ;Milanich placed Guacara at Charles Spring, six miles from Baptizing Spring
+                (lengthRange 5.5 6.5 miles)
+                (routeSegments bellamyRoad wpSanJuanDeGuacaraI wpBellamyGuacaraII)
+                (segments SanJuanDeGuacaraII_Bellamy)
+         )
          (route SanJuanDeGuacaraII_Potohiriba
+                ;In 1675, Apalachee's Lieutenant gave Guacara-San Pedro distance as 9 leagues
+                ; and Bp. Calderón said distance was 10 leagues
                 (segments SanJuanDeGuacaraII_Bellamy)
                 (routeSegments bellamyRoad wpBellamyGuacaraII wpPotohiriba1_Bellamy)
                 (segments PotohiribaI_Bellamy)
          )
-)
 
 
-(feature PotohiribaIMission
-        (marker SiteOfSanPedro
-                (html "◆ historical marker: Site of San Pedro")
-                30.365367 -83.484617
-        )
 
+         ;Santa Cruz de Tarihica
+         (segment Tarihica_Bellamy
+                  (path
+                    30.35555 -83.34542
+                    30.355696 -83.340674
+                  )
+                  (point wpTarihicaBellamy 30.355696 -83.340674)
+         )
+
+
+         ;San Pedro y San Pablo de Potohiriba
         (route Potohiriba1_Machaba
                ; In 1675: 1.5 to 2 leagues from Santa Elena de Machaba
                (lengthRange 1.5 2 leagues)
 
                (segment PotohiribaI_Bellamy
                    (style roadOfInterest)
-                   (circle PotohiribaI
-                           (style indefiniteAreaStyle)
-                           (popup "San Pedro y San Pablo de Potohiriba I (1630)")
-                           30.36860 -83.49288
-                           (radius 500)
-                   )
                    (path Potohiriba1CR14
                          (attestation guess)
                          30.36860 -83.49288
@@ -110,10 +125,6 @@
                    (point wpPotohiriba1_Bellamy 30.362658 -83.488995)
                )
                (routeSegments bellamyRoad wpPotohiriba1_Bellamy wpMachabaI_BellamyEast)
-        )
-
-        (marker MachabaHigh
-                30.359697 -83.571973
         )
 
         (route Potohiriba_Asile         ;prelimiinary route definition to calibrate distances
@@ -149,31 +160,7 @@
                    )
                )
         )
-)
 
 
-(feature MachabaIMission
-         (circle MachabaI
-                 (style indefiniteAreaStyle)
-                 (popup "Santa Elena de Machaba (1655)")
-                 30.36349 -83.55167
-                 (radius 550)
-         )
-         (segment MachabaI_BellamyEast
-                  (paths MachabaI)
-                  (path
-                    (attestation guess)
-                    30.36349 -83.55167
-                    30.36267 -83.55021
-                    30.36164 -83.54922
-                    30.35979 -83.54875
-                    30.35927 -83.54772
-                    30.35819 -83.54635
-                    30.35742 -83.54497
-                    30.35679 -83.54437
-                    30.356345 -83.544089
-                  )
-                  (point wpMachabaI_BellamyEast 30.356345 -83.544089)
-         )
 )
 
