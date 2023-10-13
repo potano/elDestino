@@ -10,6 +10,14 @@
    mapdiv.move({height: h1Height});
    var initialZoom = h1Height > 300 ? 13 : 12;
    var initialCenter = [30.405, -84.05];
+   if (window.force) {
+      if (force.initialZoom) {
+         initialZoom = force.initialZoom
+      }
+      if (force.initialCenter) {
+         initialCenter = force.initialCenter
+      }
+   }
 
    var makers = {
       path:      L.polyline,

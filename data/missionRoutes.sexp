@@ -3,12 +3,12 @@
 (feature missionRoutes
 
          ;San Francisco de Potano
-         (route Potano_TolocoI
+         (route Potano_TolocoII
                 (style roadOfInterest)
                 (attestation guess)
                 (segment
                   (paths sanFranciscoDePotanoMission
-                         Potano_TolocoI_West
+                         Potano_TolocoII_West
                          wpTolocoII
                   )
                 )
@@ -20,9 +20,12 @@
 
 
          ;Santa Fé de Toloco II
-         (route TolocoII_Ayaocuto
-                ;trial run for measuring hypothesized second site of Santa Fé de Toloco
-                (routeSegments bellamyRoad wpTolocoII wpAyaocutoI_Bellamy)
+         (route TolocoII_SantaCatalina
+                ;Bp. Calderón placed Santa Catalina 12 leagues from Santa Fé
+                ;This tests a distance to the hypothesized Santa Catalina from the hypothesized
+                ; Toloco II
+                (lengthRange 11.5 12.5 leagues)
+                (routeSegments bellamyRoad wpTolocoII wpSantaCatalinaDeAjohica)
          )
 
 

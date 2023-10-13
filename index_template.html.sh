@@ -9,6 +9,11 @@ localCssTs=$(stat -c %Y local.css)
 dataTs=$(stat -c %Y data.js)
 appTs=$(stat -c %Y app.js)
 
+force=
+if [ -f force.js ]; then
+        force='<script>'$(cat force.js)'</script>'
+fi
+
 mydir=$(dirname $0)
 
 cat >"$mydir/index.html" <<END
@@ -23,7 +28,7 @@ cat >"$mydir/index.html" <<END
       <link rel="stylesheet" href="leaflet.css?t=$leafletCssTs"/>
       <link rel="stylesheet" href="local.css?t=$localCssTs"/>
       <script src="leaflet.js?t=$leafletTs"></script>
-      <script src="data.js?t=$dataTs"></script>
+      <script src="data.js?t=$dataTs"></script>$force
    </head>
    <body>
       <script src="app.js?t=$appTs"></script>

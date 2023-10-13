@@ -2,9 +2,9 @@
 
 ; Paths in Columbia and Suwannee Counties
 
-(path OLeno_FigSpring
+(path Bellamy_inColumbia
       (attestation modern_name)
-      29.900615 -82.575895      ;County line
+      29.900615 -82.575877      ;County line
       29.900928 -82.577788      ;Columbia County
       29.901181 -82.580125
       29.901491 -82.581567
@@ -88,12 +88,22 @@
       29.918654 -82.655256
       29.918883 -82.655845
       29.919927 -82.658283
+)
+
+(path Bellamy_to_ElamChurch
+      (attestation guess)
+      29.919927 -82.658283
       29.920364 -82.659142
       29.921914 -82.662145
       29.922450 -82.663085
       29.923109 -82.664480
       29.926256 -82.670176
       29.929791 -82.675528
+      29.933233 -82.679718
+)
+
+(path Bellamy_ElamChurch_Itchetucknee
+      (attestation modern_path)
       29.933233 -82.679718
       29.935087 -82.681933
       29.937588 -82.685410
@@ -148,18 +158,12 @@
       29.978124 -82.751424
       29.978737 -82.751843
       29.978952 -82.751977
-)
-
-
-
-(path BellamyRoad_CR238
-      (attestation modern_path)
-      29.978972 -82.751931
+      29.978972 -82.751931      ;scanned separately in OSMAnd
       29.981360 -82.753502
       29.981927 -82.753979
 )
 
-(path Bellamy_Ichetucknee
+(path Bellamy_Itchetucknee
       (attestation excursion)
       29.981927 -82.753979
       29.982362 -82.754410

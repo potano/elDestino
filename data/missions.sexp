@@ -79,7 +79,7 @@
                           (popup "<b>Santa Fé de Toloco II (1657)</b><br/>"
                                  "Possible new site")
                           (style indefiniteAreaStyle)
-                          29.809658 -82.486558
+                          29.809683 -82.486574
                           (radius 250)
                   )
          )
@@ -95,6 +95,18 @@
                     (style indefiniteAreaStyle)
                     29.97609 -82.75746
                     (radius 200)
+                  )
+         )
+
+         (feature SantaCatalinaDeAjohica
+                  ;No one seems ready to pin a location for this mission Bp. Calderón named in 1675
+                  ;Several authors indicate it was by the Suwannee but fail to locate it
+                  ;Bp. Calderón wrote that the mission was 12 leagues from Santa Fé
+                  ;This location amid two springs is  miles from my hypothesized Toloco II
+                  (circle wpSantaCatalinaDeAjohica
+                          (style indefiniteAreaStyle)
+                          30.103971 -83.113840
+                          (radius 100)
                   )
          )
 

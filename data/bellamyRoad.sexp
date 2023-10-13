@@ -1,7 +1,7 @@
 ;SPDX-License-Identifier: GPL-2.0-or-later
 (route bellamyRoad
          (style bellamyRoadStyle)
-         (popup "<b>Bellamy Road</b><br>Lake Sampala (San Pedro de Potohiriba) to the state capitol")
+         (popup "<b>Bellamy Road</b><br>Newnansville to the state capitol")
 
          (segment
            ;Data digitized in QGIS with trace from topographic map
@@ -16,14 +16,15 @@
            ;Trace around Newnansville conforms with old maps of the town
            ;Data transferred via .geojson file
            (attestation old_map)
-           (paths Bellamy_WofNewnansville_AlligatorRoad Bellamy_Alligator Bellamy_I75 Bellamy_Traxler_OLeno)
+           (paths Bellamy_WofNewnansville_AlligatorRoad Bellamy_Alligator Bellamy_I75 Bellamy_Traxler_OLeno
+                  Bellamy_Alachua_OLeno_Gap Bellamy_OLeno_inAlachua)
          )
 
          (segment
            ;Data digitized with tablet using OSMAnd guided by topographic map
            (attestation old_map medium)
-           (paths OLeno_FigSpring
-                  BellamyRoad_CR238 Bellamy_Ichetucknee BellamyRoad_SpanishRoad BellamyRoad_260th_CharlesSpring
+           (paths Bellamy_inColumbia Bellamy_to_ElamChurch Bellamy_ElamChurch_Itchetucknee
+                  Bellamy_Itchetucknee BellamyRoad_SpanishRoad BellamyRoad_260th_CharlesSpring
            )
          )
 
