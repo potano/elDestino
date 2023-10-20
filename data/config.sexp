@@ -18,12 +18,17 @@
              "fillOpacity=0.1"
   )
   (baseStyle bellamyRoadStyle
-             "color=#33AA33"
+             "color=#22AA22"
   )
   (baseStyle roadOfInterest
              "color=#AA3333"
              "opacity=0.6"
              "width=5"
+  )
+  (baseStyle missionRoute
+             "color=#BB33AA"
+             "opacity=0.6"
+             "width=3"
   )
   (baseStyle invisiblePath
              "hidePath=true"

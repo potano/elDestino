@@ -13,18 +13,20 @@
 
          (segment
            ;Data digitized in QGIS with trace from topographic map
-           ;Trace around Newnansville conforms with old maps of the town
            ;Data transferred via .geojson file
            (attestation old_map)
-           (paths Bellamy_WofNewnansville_AlligatorRoad Bellamy_Alligator Bellamy_I75 Bellamy_Traxler_OLeno
-                  Bellamy_Alachua_OLeno_Gap Bellamy_OLeno_inAlachua)
+           (paths Bellamy_WofNewnansville_AlligatorRoad Alligator_EofBellamy
+                  Bellamy_Alligator Bellamy_I75 Bellamy_Traxler_OLeno
+                  Bellamy_Alachua_OLeno_Gap Bellamy_OLeno_inAlachua
+                  Bellamy_inColumbia)
          )
 
          (segment
-           ;Data digitized with tablet using OSMAnd guided by topographic map
+           ;Data digitized in QGIS with trace from topographic map
            (attestation old_map medium)
-           (paths Bellamy_inColumbia Bellamy_to_ElamChurch Bellamy_ElamChurch_Itchetucknee
-                  Bellamy_Itchetucknee BellamyRoad_SpanishRoad BellamyRoad_260th_CharlesSpring
+           (paths Bellamy_to_CR238atSR47 Bellamy_ElamChurchRoad CR238_in_Ichetucknee
+                  BellamyRoad_SpanishRoad BellamyRoad_SpanishRoad_to_CR349 Bellamy_CR349
+                  Bellamy_E_of_RoyalSpring Bellamy_198trl_198terr Bellamy_western_Suwannee_springs
            )
          )
 

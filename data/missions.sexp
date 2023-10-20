@@ -44,7 +44,7 @@
                   ;Site is relatively remote; it is off the Camino Real
                   (circle sanFranciscoDePotanoMission
                           (popup "<b>San Francisco de Potano (1607)</b><br/>"
-                                 "First mission west of the St. John's<br/>"
+                                 "First mission west of the St. Johns River<br/>"
                                  "Last mission in the interior of Florida to fall"
                           )
                           (style indefiniteAreaStyle)
@@ -60,9 +60,9 @@
                   ;Mission and village were moved after the 1656 rebellion
                   ;The Utina of Arapaja moved to the site in 1657
                   (circle
-                    (popup "<b>Santa Fé de Toloco I (1616)</b><br/>"
-                           "Mission and people moved after the rebellion<br/>"
-                           "of 1656.")
+                    (popup "<b>Santa Fé de Toloco I (1616 - 1656)</b><br/>"
+                           "Mission and people moved south to the safety of El<br/>"
+                           "Camino after the rebellion of 1656")
                     (style indefiniteAreaStyle)
                     29.93128 -82.51977
                     (radius 250)
@@ -76,8 +76,11 @@
                   ;Mission and village were moved after the 1656 rebellion
                   ;The Utina of Arapaja moved to the site in 1657
                   (circle wpTolocoII
-                          (popup "<b>Santa Fé de Toloco II (1657)</b><br/>"
-                                 "Possible new site")
+                          (popup "<b>Santa Fé de Toloco II (1657 - 1702)</b><br/>"
+                                 "Proposed site of the relocated Santa Fé mission<br/>"
+                                 "to a point along El Camino Real. Destroyed by an<br/>"
+                                 "English raiding party at the time of the siege of<br/>"
+                                 "St. Augustine.")
                           (style indefiniteAreaStyle)
                           29.809683 -82.486574
                           (radius 250)
@@ -86,14 +89,15 @@
 
          (feature SanMartinDeAyaocuto
                   ;Milanich places this mission at Ichetucknee; Hann specifically at Fig Spring
-                  ;Fr. López placed the mission 10 leages from the land of the Potano
+                  ;Fr. López placed the mission 10 leagues from the land of the Potano
                   ;de la Calle placed the mission 34 leagues from St. Augustine
                   ;Mission ended in 1656; Bp. Calderón does not mention it
                   (circle
-                    (popup "<b>San Martín de Ayaocuto (1610-1656)</b><br/>"
-                           "Likely the home of the holata of the Northern Utina")
+                    (popup "<b>San Martín de Ayaocuto (1610 - 1656)</b><br/>"
+                           "Likely home of the <i>holata</i> (chieftain) of the Northern<br/>"
+                           "Utina. Mission died in the revolt of 1656.")
                     (style indefiniteAreaStyle)
-                    29.97609 -82.75746
+                    29.967353 -82.759394
                     (radius 200)
                   )
          )
@@ -101,25 +105,58 @@
          (feature SantaCatalinaDeAjohica
                   ;No one seems ready to pin a location for this mission Bp. Calderón named in 1675
                   ;Several authors indicate it was by the Suwannee but fail to locate it
+                  ;Gannon places it on the Santa Fe
                   ;Bp. Calderón wrote that the mission was 12 leagues from Santa Fé
-                  ;This location amid two springs is  miles from my hypothesized Toloco II
+                  ;It is not possible to satisfy Bp. Calderón's account of distances between
+                  ; Santa Fé, Santa Catalina, Ajohica, Tarihica, ahd Guacara while placing all of
+                  ; them on a reasonably direct path for the Camino.  It is generally accepted
+                  ; that at least one or two of these missions was at some distance from the
+                  ; Camino.  My proposed solution places Santa Catalina about 5 miles north of
+                  ; the Camino at the bluffs of Little River near Mt. Pisgah church.  This fits
+                  ; well with Bp. Calderón's distance of 12 leagues from Santa Fé.
                   (circle wpSantaCatalinaDeAjohica
+                          (popup "<b>Santa Catalina de Ajohica II (1655 - 1685)</b><br/>"
+                                 "Mission was recorded to have moved; neither location"
+                                 " is known. Proposed here is the second location of the"
+                                 " mission based on Bp. Calderón's reports and the"
+                                 " characteristics of this area.  Mission was destroyed"
+                                 " in Yamassee raids; inhabitants were killed or enslaved.")
                           (style indefiniteAreaStyle)
-                          30.103971 -83.113840
-                          (radius 100)
+                          30.099841 -82.903212
+                          (radius 200)
                   )
+                  (point wpBellamy_SantaCatalinaSpur 30.005308 -82.854712)
          )
 
-         (feature SanJuanDeGuacaraIAlternate
-                  ;Candidate for location of Guacara I based on distance from Ayaocuto
-                  ;Is at Royal Spring on the Santa Fe along El Camino Real
-                  ;Apalachee's Lieutenant (1675) placed mission on the bank of a large river
-                  ;This alternate location is on the Santa Fe rather than the Suwannee
-                  (circle wpGuacaraIAlternate
+         (feature Ajohica
+                  ;Town on Bp. Calderón's itinerary
+                  ;My proposal places Ajohica at Shingle Spring on the Suwannee south of Branford
+                  (circle wpAjohica
+                          (popup "<b>Ajohica</b><br/>"
+                                 "Proposed location of town Bp. Calderón reported as 3 leagues"
+                                 " from Santa Catalina and 2 from Tarihica. Location near"
+                                 " Shingle Spring makes it a candidate for a settlement.")
                           (style indefiniteAreaStyle)
-                          30.087111 -83.073491
-                          (radius 30)
+                          29.934952 -82.920701
+                          (radius 200)
                   )
+                  (point wpSantaCatalina_Ajohica_TarihicaSpur 29.945254 -82.918297)
+         )
+
+         (feature SantaCruzDeTarihicaII
+                  ;Town on Bp. Calderón's itinerary
+                  ;My proposal places Tarihica II at Little River Springs on the Suwannee
+                  (circle wpTarihica
+                          (popup "<b>Santa Cruz de Tarihica II (after 1655 - ca. 1690)</b><br/>"
+                                 "Mission moved after 1655 revolt; neither location is known."
+                                 " Proposed here is the second location based on Bp. Calderón's"
+                                 " report of a 7-league distance from Guacara and this site of"
+                                 " springs along the Suwannee.")
+                          (style indefiniteAreaStyle)
+                          29.997177 -82.965900
+                          (radius 200)
+                  )
+                  (point jctTarihicaSplit_CR349 30.043317 -83.020503)
          )
 
          (feature SanJuanDeGuacaraI
@@ -127,9 +164,13 @@
                   ;Archeological evidence supports a Baptizing Spring site, but not the records
                   (circle wpSanJuanDeGuacaraI
                           (style indefiniteAreaStyle)
-                          (popup "San Juan de Guacara I")
-                          30.134163 -83.131733
-                          (radius 150)
+                          (popup "<b>San Juan de Guacara I (1612 - 1655?)</b></br/>"
+                                 "Archeological evidence places the first site of the mission"
+                                 " here. The name <i>Baptizing Spring</i> stands as a good"
+                                 " clue. The early founding of this mission gives weight to"
+                                 " the theory that El Camino Real passed through here.")
+                          30.136050 -83.134124
+                          (radius 200)
                   )
          )
 
@@ -142,20 +183,21 @@
                   ;In 1675 Apalachee's Lieutenant place Guacara 9 leagues from San Pedro and
                   ; 8 from Tarihica
                   ;Bp. Calderón the same year gave the distances as 10 and 7 leagues
-                  (circle 30.16658 -83.23013
-                          (popup "San Juan De Guacara II (1675-1689)")
+                  (circle GuacaraII
+                          (popup "<b>San Juan De Guacara II (by 1675 - 1689)</b></br/>"
+                                 "Second location of the mission to the site of the Suwannee"
+                                 " River crossing. Mission was destroyed by the Yamassee.")
                           (style indefiniteAreaStyle)
-                          (radius 100)
+                          30.166944 -83.230278
+                          (radius 150)
                   )
          )
 
-         (feature SantaCruzDeTarihica
+         (feature SantaCruzDeTarihicaI
                   ;The 1655 list gave the distance of 54 leagues from St. Augustine
-                  ;In 1675 the bishop and the lieutenant gave the same distance of 5 leagues
-                  ; from Santa Catalina
                   ;No better clues given; distances place it tentatively at Patterson Sink
                   (circle TarihicaAtPattersonSink
-                          (popup "<b>Santa Cruz de Tarihica (1612-ca. 1690)</b>")
+                          (popup "<b>Santa Cruz de Tarihica (1612-before 1675)</b>")
                           (style indefiniteAreaStyle)
                           30.35555 -83.34542
                           (radius 50)
