@@ -45,8 +45,8 @@
          ;San Martín de Ayaocuto
          ;Known with high certainty to be at Fig Spring in Ichetucknee State Park
          ;Mission perished in Timuquan revolt of 1656 without having moved
-         ;The 1655 listing placed Ayaocuto 8 leagues from Guacara I; measured as 28.23 miles
-         ;This gives a league of 3.53 miles.
+         ;The 1655 listing placed Ayaocuto 8 leagues from Guacara I; measured as 27.75 miles
+         ;This gives a league of 3.46 miles.
          (route Ayaocuto_GuacaraI
                 (style missionRoute)
                 (segment AyaocutoI_Bellamy
@@ -69,6 +69,23 @@
                          (point wpAyaocutoI_Bellamy 29.977837 -82.751210)
                 )
                 (routeSegments bellamyRoad wpAyaocutoI_Bellamy wpSanJuanDeGuacaraI)
+         )
+         (route Ayaocuto_GuacaraII
+                ;Ayaocuto is attested to be 34 leagues from St. Augustine
+                ;Use this route to establish St. Augustine-to-Charles Spring distance
+                ;34.18 miles = 11.4 leagues therefore GuacaraII is at 45.4 leagues
+                (style missionRoute)
+                (segments AyaocutoI_Bellamy)
+                (routeSegments bellamyRoad wpAyaocutoI_Bellamy GuacaraII)
+         )
+         (route Ayaocuto_TarihicaI
+                ;57.86 miles (19 3-mile leagues, 16.2 fat leagues)
+                (style missionRoute)
+                (segments AyaocutoI_Bellamy)
+                (routeSegments bellamyRoad wpAyaocutoI_Bellamy wpSpurTarihicaBlueSprings)
+                (segment Bellamy_TarihicaBlueSprings
+                  (paths spurTarihicaBlueSprings)
+                )
          )
 
 
@@ -112,11 +129,11 @@
                 (lengthRange 5.5 6.5 miles)
                 (routeSegments bellamyRoad wpSanJuanDeGuacaraI GuacaraII)
          )
-         (route GuacaraI_Tarihica
+         (route GuacaraI_TarihicaI
                 (style missionRoute)
                 ;Test assertion of equistance between Guacara I and Tarihica
-                (routeSegments bellamyRoad wpSanJuanDeGuacaraI wpTarihicaBellamy)
-                (segments Tarihica_Bellamy)
+                (routeSegments bellamyRoad wpSanJuanDeGuacaraI wpSpurTarihicaBlueSprings)
+                (segments Bellamy_TarihicaBlueSprings)
          )
 
 
@@ -128,71 +145,38 @@
                 ; and Bp. Calderón said distance was 10 leagues
                 (style missionRoute)
                 (routeSegments bellamyRoad GuacaraII wpPotohiriba1_Bellamy)
-                (segments PotohiribaI_Bellamy)
+                (segment PotohiribaI_Bellamy
+                         (attestation guess)
+                         (style roadOfInterest)
+                         (path Potohiriba1CR14
+                               30.36860 -83.49288
+                               30.362658 -83.488995
+                         )
+                )
          )
 
 
-         ;Santa Cruz de Tarihica
-         (segment Tarihica_Bellamy
-                  (path
-                    30.35555 -83.34542
-                    30.355696 -83.340674
-                  )
-                  (point wpTarihicaBellamy 30.355696 -83.340674)
-         )
+         ;Santa Cruz de Tarihica I
+         ;Is at known distance from Ayaocuto and Guacara
+         ;No waypoints further along
 
 
          ;San Pedro y San Pablo de Potohiriba
-        (route Potohiriba1_Machaba
-               ; In 1675: 1.5 to 2 leagues from Santa Elena de Machaba
-               (lengthRange 1.5 2 leagues)
+         (route Potohiriba1_Machaba
+                ; In 1675: 1.5 to 2 leagues from Santa Elena de Machaba
+                (lengthRange 1.5 2 leagues)
                 (style missionRoute)
-
-               (segment PotohiribaI_Bellamy
-                   (style roadOfInterest)
-                   (path Potohiriba1CR14
-                         (attestation guess)
-                         30.36860 -83.49288
-                         30.362658 -83.488995
-                   )
-                   (point wpPotohiriba1_Bellamy 30.362658 -83.488995)
-               )
-               (routeSegments bellamyRoad wpPotohiriba1_Bellamy wpMachabaI_BellamyEast)
+                (routeSegments bellamyRoad wpPotohiriba1_Bellamy MachabaI)
         )
 
-        (route Potohiriba_Asile         ;prelimiinary route definition to calibrate distances
+        (route Machaba_Asile         ;prelimiinary route definition to calibrate distances
                ;rough calculation: Potohiriba-Machaba 1.5-2 leagues, Machaba-Tolpatafi 3.5-4,
                ; Tolpatafi-Asile 2-2.5 leagues.  Range 7 to 8.5 leagues
                ;Given calculated length of 22.48 miles, this yields a league of 2.64 to 3.21
                ; miles.  More calibrations will be necessary.  For now we'll use a standard
                ; league of 3 miles
-               (lengthRange 7 8.5 leagues)
                (style missionRoute)
-               (segment
-                   (style roadOfInterest)
-                   (paths Potohiriba1CR14 wpPotohiriba1_Bellamy)
-               )
-               (segment
-                   (style invisiblePath)
-                   (paths wpPotohiriba1_Bellamy Bellamy_CR14
-                          cr360_SanPedroEbb BellamyInterpolationEbb federalRoadEbbUS27
-                          us27federalLamont
-                   )
-               )
-               (segment
-                   (style roadOfInterest)
-                   (path
-                         (attestation guess)
-                         30.373066 -83.809215
-                         30.37223  -83.81122
-                   )
-                   (circle Asile
-                           (style indefiniteAreaStyle)
-                           (popup "San Miguel de Asile")
-                           30.37223  -83.81122
-                           (radius 800)
-                   )
-               )
+               (routeSegments bellamyRoad MachabaI 30.373066 -83.809215)
         )
 
 

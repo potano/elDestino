@@ -55,6 +55,7 @@
       30.244711 -83.282917
       30.260267 -83.283102      ;Madison County
       30.263815 -83.283174      ;Lafayette County
+      30.264295 -83.283215      ;wpSpurTarihicaBlueSprings
       30.264717 -83.283265
       30.265529 -83.283393
       30.266286 -83.283599
@@ -1296,5 +1297,25 @@
       30.372978 -83.809055
       30.373036 -83.809134
       30.373066 -83.809215
+)
+
+
+
+(path spurTarihicaBlueSprings
+      ;to Tarihica I mission at Blue Springs on the Withlacoochee
+      ;Digitized in tablet using OSMAnd; transferred from CharlesSpring_Hopewell.gpx
+      (attestation guess)
+      30.264295 -83.283215      ;wpSpurTarihicaBlueSprings
+      30.298498 -83.283630
+      30.310512 -83.282265
+      30.315807 -83.282419
+      30.342677 -83.278331
+      30.367939 -83.273798
+      30.392482 -83.266792
+      30.415242 -83.261435
+      30.435049 -83.255253
+      30.453889 -83.250307
+      30.465103 -83.247748
+      30.477008 -83.244863
 )
 

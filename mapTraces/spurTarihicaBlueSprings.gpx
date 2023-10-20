@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<gpx version="1.1" creator="OsmAndRouterV2" xmlns="http://www.topografix.com/GPX/1/1" xmlns:osmand="https://osmand.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name>spurTarihicaBlueSprings</name>
+  </metadata>
+  <trk>
+    <name>spurTarihicaBlueSprings</name>
+    <trkseg>
+      <trkpt lat="30.2642947" lon="-83.2832148" />
+      <trkpt lat="30.2984978" lon="-83.2836297" />
+      <trkpt lat="30.3105122" lon="-83.2822646" />
+      <trkpt lat="30.315807" lon="-83.2824191" />
+      <trkpt lat="30.3426769" lon="-83.2783314" />
+      <trkpt lat="30.3679385" lon="-83.2737981" />
+      <trkpt lat="30.3924824" lon="-83.2667921" />
+      <trkpt lat="30.4152421" lon="-83.2614346" />
+      <trkpt lat="30.4350494" lon="-83.2552528" />
+      <trkpt lat="30.4538894" lon="-83.2503074" />
+      <trkpt lat="30.4651028" lon="-83.2477475" />
+      <trkpt lat="30.4770079" lon="-83.2448627" />
+    </trkseg>
+  </trk>
+</gpx>

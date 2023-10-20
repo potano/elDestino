@@ -61,8 +61,8 @@
                   ;The Utina of Arapaja moved to the site in 1657
                   (circle
                     (popup "<b>Santa Fé de Toloco I (1616 - 1656)</b><br/>"
-                           "Mission and people moved south to the safety of El<br/>"
-                           "Camino after the rebellion of 1656")
+                           "Mission and people moved south to the safety of El Camino"
+                           " after the rebellion of 1656")
                     (style indefiniteAreaStyle)
                     29.93128 -82.51977
                     (radius 250)
@@ -77,10 +77,9 @@
                   ;The Utina of Arapaja moved to the site in 1657
                   (circle wpTolocoII
                           (popup "<b>Santa Fé de Toloco II (1657 - 1702)</b><br/>"
-                                 "Proposed site of the relocated Santa Fé mission<br/>"
-                                 "to a point along El Camino Real. Destroyed by an<br/>"
-                                 "English raiding party at the time of the siege of<br/>"
-                                 "St. Augustine.")
+                                 "Proposed site of the relocated Santa Fé mission to a point"
+                                 " along El Camino Real. Destroyed by an English raiding party"
+                                 " at the time of the siege of St. Augustine.")
                           (style indefiniteAreaStyle)
                           29.809683 -82.486574
                           (radius 250)
@@ -162,6 +161,8 @@
          (feature SanJuanDeGuacaraI
                   ;Milanich places the first site at Baptizing Spring
                   ;Archeological evidence supports a Baptizing Spring site, but not the records
+                  ;Mission is halfway between San Martín de Ayaocuto in the east and
+                  ; Santa Cruz de Tarihica I in the west.
                   (circle wpSanJuanDeGuacaraI
                           (style indefiniteAreaStyle)
                           (popup "<b>San Juan de Guacara I (1612 - 1655?)</b></br/>"
@@ -195,13 +196,22 @@
 
          (feature SantaCruzDeTarihicaI
                   ;The 1655 list gave the distance of 54 leagues from St. Augustine
-                  ;No better clues given; distances place it tentatively at Patterson Sink
-                  (circle TarihicaAtPattersonSink
-                          (popup "<b>Santa Cruz de Tarihica (1612-before 1675)</b>")
+                  ;Also shown as the same distance from Guacara I as is San Martín de
+                  ; Ayaocuto: 27.75 miles
+                  ;Milanich states that it is well north of El Camino Real
+                  ;Hypothesis: mission is at Blue Springs, a first-magnitude spring on the
+                  ; Withlacoochee
+                  (circle TarihicaI
+                          (popup "<b>Santa Cruz de Tarihica (1612 - 1655?)</b><br/>"
+                                 "Mission was originally to the west of Guacara I evidently"
+                                 " at some distance removed from El Camino Real. There is"
+                                 " no better information about its true location. Mission"
+                                 " moved to the banks of the Suwannee.")
                           (style indefiniteAreaStyle)
-                          30.35555 -83.34542
-                          (radius 50)
+                          30.477008 -83.244863
+                          (radius 200)
                   )
+                  (point wpSpurTarihicaBlueSprings 30.264295 -83.283215)
          )
 
          (feature PotohiribaIMission
@@ -214,34 +224,38 @@
                   )
                   (circle PotohiribaI
                           (style indefiniteAreaStyle)
-                          (popup "San Pedro y San Pablo de Potohiriba I (1630)")
+                          (popup "<b>San Pedro y San Pablo de Potohiriba I (1630)</b><br/>"
+                                 "Important mission whose name comes down to us today in"
+                                 " places like \"Lake Sampala\" and \"San Pedro Bay.\"<br/>"
+                                 "Was one of the last missions to fall.")
                           30.36860 -83.49288
                           (radius 500)
                   )
+                  (point wpPotohiriba1_Bellamy 30.362658 -83.488995)
          )
 
          (feature MachabaIMission
+                  ;Variously stated as 1.5 or 2 miles from Potohiriba
+                  ;Here we use 5 miles
                   (circle MachabaI
                           (style indefiniteAreaStyle)
-                          (popup "Placeholder for Santa Elena de Machaba (1655)")
-                          30.36349 -83.55167
+                          (popup "<b>Santa Elena de Machaba (1655)</b><br/>"
+                                 "Reported as 1.5 to 2 leagues from Potohiriba.<br/>"
+                                 "No mission site has been found")
+                          30.357374 -83.556866
                           (radius 550)
                   )
-                  (segment MachabaI_BellamyEast
-                           (paths MachabaI)
-                           (path
-                             (attestation guess)
-                             30.36349 -83.55167
-                             30.36267 -83.55021
-                             30.36164 -83.54922
-                             30.35979 -83.54875
-                             30.35927 -83.54772
-                             30.35819 -83.54635
-                             30.35742 -83.54497
-                             30.35679 -83.54437
-                             30.356345 -83.544089
-                           )
-                           (point wpMachabaI_BellamyEast 30.356345 -83.544089)
+         )
+
+         (feature TolapatafiMission
+                  ;San Mateo de Tolapatafi
+                  ;Variously stated as 3.5 or 4 leagues from Machaba; here we use 9.8 miles
+                  (circle Tolapatafi
+                          (style indefiniteAreaStyle)
+                          (popup "<b>San Mateo de Tolapatafi (1656)</b><br/>"
+                                 "Listed as 3.5 or 4 leagues from Machaba.")
+                          30.365014 -83.702388
+                          (radius 200)
                   )
          )
 
