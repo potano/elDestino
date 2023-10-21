@@ -158,27 +158,32 @@
 
          ;Santa Cruz de Tarihica I
          ;Is at known distance from Ayaocuto and Guacara
-         ;No waypoints further along
+         ;No waypoints further along; not enough constraints to fix position
 
 
          ;San Pedro y San Pablo de Potohiriba
          (route Potohiriba1_Machaba
                 ; In 1675: 1.5 to 2 leagues from Santa Elena de Machaba
-                (lengthRange 1.5 2 leagues)
+                (lengthRange 1.25 2.5 leagues)
                 (style missionRoute)
                 (routeSegments bellamyRoad wpPotohiriba1_Bellamy MachabaI)
-        )
+         )
 
-        (route Machaba_Asile         ;prelimiinary route definition to calibrate distances
-               ;rough calculation: Potohiriba-Machaba 1.5-2 leagues, Machaba-Tolpatafi 3.5-4,
-               ; Tolpatafi-Asile 2-2.5 leagues.  Range 7 to 8.5 leagues
-               ;Given calculated length of 22.48 miles, this yields a league of 2.64 to 3.21
-               ; miles.  More calibrations will be necessary.  For now we'll use a standard
-               ; league of 3 miles
+
+         ;Santa Elena de Machaba
+        (route Machaba_Tolapatafi
+               (lengthRange 3.25 4.5 leagues)
                (style missionRoute)
-               (routeSegments bellamyRoad MachabaI 30.373066 -83.809215)
+               (routeSegments bellamyRoad MachabaI Tolapatafi)
         )
 
+
+        ;San Mateo de Tolapatafi
+        (route Tolapatafi_Asile
+               (lengthRange 1.75 3 leagues)
+               (style missionRoute)
+               (routeSegments bellamyRoad Tolapatafi AsileMission)
+        )
 
 )
 

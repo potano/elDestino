@@ -236,27 +236,40 @@
 
          (feature MachabaIMission
                   ;Variously stated as 1.5 or 2 miles from Potohiriba
-                  ;Here we use 5 miles
                   (circle MachabaI
                           (style indefiniteAreaStyle)
                           (popup "<b>Santa Elena de Machaba (1655)</b><br/>"
                                  "Reported as 1.5 to 2 leagues from Potohiriba.<br/>"
                                  "No mission site has been found")
-                          30.357374 -83.556866
-                          (radius 550)
+                          30.361282 -83.568119
+                          (radius 300)
                   )
          )
 
          (feature TolapatafiMission
                   ;San Mateo de Tolapatafi
-                  ;Variously stated as 3.5 or 4 leagues from Machaba; here we use 9.8 miles
+                  ;Variously stated as 3.5 or 4 leagues from Machaba
                   (circle Tolapatafi
                           (style indefiniteAreaStyle)
                           (popup "<b>San Mateo de Tolapatafi (1656)</b><br/>"
                                  "Listed as 3.5 or 4 leagues from Machaba.")
-                          30.365014 -83.702388
+                          30.368506 -83.715390
                           (radius 200)
                   )
          )
 
+         (feature SanMiguelDeAsile
+                  ;San Miguel de Asile
+                  ;Westernmost Yustaga mission, therefore the westernmost Timucua mission
+                  ;Variously stated as 2 or 2.5 leagues from San Mateo de Tolapatafi
+                  (circle AsileMission
+                          (style indefiniteAreaStyle)
+                          (popup "<b>San Miguel de Asile</b><br/>"
+                                 "Westernmost Timucuan mission; is on west side of the"
+                                 " Aucilla River. Reported as 2 or 2.5 leagues from San"
+                                 " Mateo de Tolapatafi")
+                          30.371040 -83.807334
+                          (radius 200)
+                  )
+         )
 )
