@@ -41,6 +41,10 @@
       layerGroup.addTo(map);
    }
 
+   var locationController = makeLocationController(map);
+
+
+
    function addItems(group, objectList, parentStyle) {
       for (var wk = walker(objectList); wk(); ) {
          addItem(group, wk.value, parentStyle);
@@ -115,6 +119,63 @@
          out.push(arr.slice(i, i + 2));
       }
       return out;
+   }
+
+
+   function makeLocationController(map) {
+      map.locate({
+         watch: true,
+         setView: false,
+         enableHighAccuracy: true,
+      });
+      map.on('locationfound', handleLocation);
+      map.on('locationerror', handleError);
+
+      var marker, sureLocationIcon, staleLocationIcon, isSure;
+
+      function handleLocation(evt) {
+         if (!marker) {
+            sureLocationIcon = makeIcon(true);
+            staleLocationIcon = makeIcon(false);
+            marker = L.marker(evt.latlng, {
+               icon: sureLocationIcon,
+               keyboard: false,
+               alt: "",
+            });
+            marker.addTo(map);
+            isSure = true;
+            return;
+         }
+         if (!isSure) {
+            marker.setIcon(sureLocationIcon);
+            isSure = true;
+         }
+         marker.setLatLng(evt.latlng);
+      }
+
+      function handleError(evt) {
+         if (marker && isSure) {
+            marker.setIcon(staleLocationIcon);
+            isSure = false;
+         }
+      }
+
+      function makeIcon(makeSure) {
+         var svg = body.wrapNS('svg', ['svg viewBox="0 0 40 40"',
+            ['radialGradient id=g',
+               'stop offset=0 @stop-color=color',
+               'stop offset=0.5 @stop-color=color',
+               'stop offset=0.9 stop-color=white',
+               'stop offset=1 stop-color=black'],
+            'circle fill=url(#g) cx=20 cy=20 r=20'], {color: makeSure ? 'blue' : 'grey'});
+         var iconURL = 'data:image/svg+xml;base64,' + btoa(svg.toXML());
+         return L.icon({
+            iconUrl: iconURL,
+            iconSize: [16, 16],
+            iconAnchor: [8, 8],
+            className: "marker-text-icon",
+         });
+      }
    }
 })();
 
