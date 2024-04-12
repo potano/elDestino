@@ -15,7 +15,7 @@
            ;Data digitized in QGIS with trace from topographic map
            ;Data transferred via .geojson file
            (attestation old_map)
-           (paths Bellamy_WofNewnansville_AlligatorRoad Alligator_EofBellamy
+           (paths Bellamy_WofNewnansville_AlligatorRoad
                   Bellamy_Alligator Bellamy_I75 Bellamy_Traxler_OLeno
                   Bellamy_Alachua_OLeno_Gap Bellamy_OLeno_inAlachua
                   Bellamy_inColumbia)

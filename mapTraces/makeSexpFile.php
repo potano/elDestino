@@ -153,6 +153,12 @@ function getGeoJsonSegments(& $segments, $json, $basename) {
       $name = $basename;
       if (isset($json['properties'])) {
          $properties = $json['properties'];
+         foreach (array('note', 'desc', 'name') as $key) {
+            if (!empty($properties[$key])) {
+               $name = $properties[$key];
+               break;
+            }
+         }
          if (isset($properties['id'])) {
             $name .= '_' . $properties['id'];
          }

@@ -48,8 +48,8 @@
                                  "Last mission in the interior of Florida to fall"
                           )
                           (style indefiniteAreaStyle)
-                          29.716790 -82.420331
-                          (radius 120)
+                          29.715324 -82.421993
+                          (radius 150)
                   )
          )
 
@@ -59,12 +59,12 @@
                   ;Site was some distance from El Camino Real
                   ;Mission and village were moved after the 1656 rebellion
                   ;The Utina of Arapaja moved to the site in 1657
-                  (circle
+                  (circle wpSantaFeDeTolocoI
                     (popup "<b>Santa Fé de Toloco I (1616 - 1656)</b><br/>"
                            "Mission and people moved south to the safety of El Camino"
                            " after the rebellion of 1656")
                     (style indefiniteAreaStyle)
-                    29.93128 -82.51977
+                    29.930768 -82.525659
                     (radius 250)
                   )
          )
@@ -75,15 +75,16 @@
                   ;Site was some distance from El Camino Real
                   ;Mission and village were moved after the 1656 rebellion
                   ;The Utina of Arapaja moved to the site in 1657
-                  (circle wpTolocoII
-                          (popup "<b>Santa Fé de Toloco II (1657 - 1702)</b><br/>"
-                                 "Proposed site of the relocated Santa Fé mission to a point"
-                                 " along El Camino Real. Destroyed by an English raiding party"
-                                 " at the time of the siege of St. Augustine.")
-                          (style indefiniteAreaStyle)
-                          29.809683 -82.486574
-                          (radius 250)
-                  )
+;                  (circle wpTolocoII
+;                          (popup "<b>Santa Fé de Toloco II (1657 - 1702)</b><br/>"
+;                                 "Proposed site of the relocated Santa Fé mission to a point"
+;                                 " along El Camino Real. Destroyed by an English raiding party"
+;                                 " at the time of the siege of St. Augustine.")
+;                          (style indefiniteAreaStyle)
+;                          29.809683 -82.486574
+;                          (radius 250)
+;                  )
+                  (point wpTolocoII 29.809683 -82.486574)
          )
 
          (feature SanMartinDeAyaocuto
@@ -189,7 +190,7 @@
                                  "Second location of the mission to the site of the Suwannee"
                                  " River crossing. Mission was destroyed by the Yamassee.")
                           (style indefiniteAreaStyle)
-                          30.166944 -83.230278
+                          30.165861 -83.229920
                           (radius 150)
                   )
          )

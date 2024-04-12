@@ -10,7 +10,11 @@
   )
   (layer MissionRoutesLayer
          (menuitem "Mission Routes")
-         (features missionRoutes)
+         (features missionRoutes TannerAlachua)
+  )
+  (layer StuartPurcell1778Layer
+         (menuitem "Stuart Purcell 1778")
+         (features stuartPurcell1778)
   )
   (layer BellamyRoadLayer
          (menuitem "Bellamy Road")

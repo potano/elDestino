@@ -9,8 +9,17 @@
                 (lengthRange 2.5 3.5 leagues)  ;Bp. Calderón states 3 leagues
                 (segment
                   (paths sanFranciscoDePotanoMission
-                         Potano_TolocoII_West
-                         wpTolocoII
+                         SantaFeTrail_Potano
+                  )
+                  (point wpSantaFeTrailPotano 29.764573 -82.503347)
+                  (paths
+                    SantaFeTrail_TownsendBranch_Wachahoota
+                    SP_23_PathToLatchua_SantaFeTrail
+                    wpSP8_SantaFeTrail_Latchua
+                    SP_8_CharlesFerry_SanFranciscoDePupa
+                    wpSP8_SantaFeTrail_Robinson
+                    SantaFeTrail_TownsendBranch_RobinsonSinks
+                    wpSantaFeDeTolocoI
                   )
                 )
          )

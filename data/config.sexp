@@ -25,6 +25,11 @@
              "opacity=0.6"
              "width=5"
   )
+  (baseStyle SPMainRoute
+             "color=#992299"
+             "opacity=0.6"
+             "width=3"
+  )
   (baseStyle missionRoute
              "color=#BB33AA"
              "opacity=0.6"
