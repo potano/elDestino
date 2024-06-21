@@ -9,8 +9,6 @@
          (style missionRoute)
          (attestation guess)
          (route SantaFeTrail
-                (point wpSP8_SantaFeTrail_Robinson 29.859760 -82.521129)
-                (point wpSP8_SantaFeTrail_Latchua  29.835589 -82.520462)
                 (segment sfTrail
                   (paths
                     wpSantaFeDeTolocoI
@@ -28,6 +26,8 @@
         )
 )
 
+(point wpSP8_SantaFeTrail_Robinson 29.859760 -82.521129)
+(point wpSP8_SantaFeTrail_Latchua  29.835589 -82.520462)
 
 (path SantaFeTrail_TownsendBranch_Wachahoota
       (popup "Santa Fe Trail: Townsend Branch to Wachahoota<br>(Johnson 1991)")

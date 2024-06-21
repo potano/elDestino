@@ -32,11 +32,16 @@
    }).addTo(map);
    L.control.attribution().addAttribution('Main app © 2023, Michael Thompson').addTo(map);
 
+   var features = allData.features;
+   var styles = allData.styles;
+   var texts = allData.texts;
+   var points = allData.points;
+
    var layerControl = L.control.layers().addTo(map);
-   for (var wk = walker(allVectors); wk(); ) {
+   for (var wk = walker(allData.menuitems); wk(); ) {
       var menuitem = wk.value.menuitem;
       var layerGroup = L.layerGroup();
-      addItems(layerGroup, wk.value.features, {});
+      addItems(layerGroup, wk.value.f, {});
       layerControl.addOverlay(layerGroup, menuitem);
       layerGroup.addTo(map);
    }
@@ -51,25 +56,26 @@
       }
    }
 
-   function addItem(group, obj, parentStyle) {
+   function addItem(group, i, parentStyle) {
+      var obj = features[i];
       var geo, style = parentStyle;
       if (obj.style) {
-         style = objMerge(style, obj.style);
+         style = objMerge(style, styles[obj.style]);
       }
       switch (obj.t) {
          case 'feature':
          case 'route':
-            if (!obj.features) {
+            if (!obj.f) {
                return;
             }
             geo = L.featureGroup();
             geo.setStyle(style);
-            addItems(geo, obj.features, style);
+            addItems(geo, obj.f, style);
             break;
          case 'segment':
             geo = L.featureGroup();
             geo.setStyle(style);
-            addItems(geo, obj.paths, style);
+            addItems(geo, obj.f, style);
             break;
          case 'marker':
             var icon;
@@ -82,7 +88,7 @@
             else {
                icon = new L.Icon.Default;
             }
-            geo = L.marker(toPair(obj.coords), {icon: icon});
+            geo = L.marker(toPair(obj.loc), {icon: icon});
             break;
          case 'path':
             if (style.hidePath) {
@@ -91,32 +97,34 @@
             // fall through
          case 'polygon':
          case 'rectangle':
-            geo = makers[obj.t](toPairs(obj.coords));
+            geo = makers[obj.t](toPairs(obj.loc));
             geo.setStyle(style);
             break;
          case 'circle':
             var fn = obj.asPixels ? L.circleMarker : L.circle;
-            geo = fn([obj.coords[0], obj.coords[1]], {radius: obj.radius});
+            geo = fn(toPair(obj.loc), {radius: obj.radius});
             geo.setStyle(style);
             break;
          default:
             console.log("Unknown item type " + obj.t);
       }
       if (obj.popup) {
-         geo.bindPopup(obj.popup);
+         geo.bindPopup(texts[obj.popup]);
       }
       group.addLayer(geo);
    }
 
 
-   function toPair(arr) {
-      return arr.slice(0, 2);
+   function toPair(loc) {
+      return points.slice(loc[0], loc[0] + 2)
    }
 
-   function toPairs(arr) {
+   function toPairs(loc) {
+      var pos = loc[0], lim = pos + loc[1];
       var out = [];
-      for (var i = 0; i < arr.length; i += 2) {
-         out.push(arr.slice(i, i + 2));
+      while (pos < lim) {
+         out.push(points.slice(pos, pos + 2));
+         pos += 2;
       }
       return out;
    }
