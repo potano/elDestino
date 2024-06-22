@@ -37,6 +37,10 @@
 
 (feature missions
 
+         (point StAugustineCityGate
+                29.897862 -81.313614
+         )
+
          (feature SanFranciscoDePotano
                   ;First mission west of the St. John's (1607)
                   ;Archeologists confirmed the Fox Pond site as the mission site

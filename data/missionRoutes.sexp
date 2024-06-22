@@ -2,23 +2,29 @@
 
 (feature missionRoutes
 
+         ;St. Augustine
+         (route StAugustine_TolocoI
+                (style invisiblePath)
+                (segments
+                  StAugustineCityGate
+                  SP_MainRoute
+                  wpSP8_SantaFeTrail_Robinson
+                  SantaFeTrail
+                  wpSantaFeDeTolocoI
+                )
+         )
+
+
          ;San Francisco de Potano
-         (route Potano_TolocoII
+         (route Potano_TolocoI
                 (style missionRoute)
                 (attestation guess)
                 (lengthRange 2.5 3.5 leagues)  ;Bp. Calderón states 3 leagues
                 (segment
-                  (paths sanFranciscoDePotanoMission
-                         SantaFeTrail_Potano
-                  )
-                  (point wpSantaFeTrailPotano 29.764573 -82.503347)
                   (paths
-                    SantaFeTrail_TownsendBranch_Wachahoota
-                    SP_23_PathToLatchua_SantaFeTrail
-                    wpSP8_SantaFeTrail_Latchua
-                    SP_8_CharlesFerry_SanFranciscoDePupa
-                    wpSP8_SantaFeTrail_Robinson
-                    SantaFeTrail_TownsendBranch_RobinsonSinks
+                    sanFranciscoDePotanoMission
+                    SantaFeTrail_Potano
+                    SantaFeTrail
                     wpSantaFeDeTolocoI
                   )
                 )
@@ -34,7 +40,7 @@
                 ;Bp. Calderón placed Santa Catalina 12 leagues from Santa Fé
                 ;This tests a distance to the hypothesized Santa Catalina from the hypothesized
                 ; Toloco II
-                (style missionRoute)
+                (style invisiblePath)
                 (lengthRange 11.5 12.5 leagues)
                 (routeSegments bellamyRoad wpTolocoII wpBellamy_SantaCatalinaSpur)
                 (segment
@@ -42,11 +48,11 @@
                 )
          )
          (route TolocoII_GuacaraII
-                (style missionRoute)
+                (style invisiblePath)
                 (routeSegments bellamyRoad wpTolocoII GuacaraII)
          )
          (route TolocoII_Ayaocuto
-                (style missionRoute)
+                (style invisiblePath)
                 (routeSegments bellamyRoad wpTolocoII wpAyaocutoI_Bellamy)
          )
 

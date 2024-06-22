@@ -1,6 +1,7 @@
 ;Copyright © 2024 Michael Thompson
 ;SPDX-License-Identifier: GPL-2.0-or-later
 
+
 (feature TannerAlachua
          ;Data digitized in QGIS from topographc data with approximation to the 1823
          ;Tanner map and the map of Alachua Country trails in Kenneth Johnson's
@@ -9,25 +10,35 @@
          (style missionRoute)
          (attestation guess)
          (route SantaFeTrail
-                (segment sfTrail
+                ;A good reconstruction of the trail makes it appear it had a concurrency
+                ;with the Stuart-Purcell route as it passed west of Townsend Creek.
+                ;Here we delineate segments north and south of the concurrency along
+                ;with an anonymous segment that captures the path(s) of the SP route.
+                (segment sfTrail_Robinson_Townsend
+                         (paths
+                           wpSantaFeDeTolocoI
+                           SantaFeTrail_TownsendBranch_RobinsonSinks
+                         )
+                )
+                (segment
+                  (point wpSP8_SantaFeTrail_Robinson 29.859760 -82.521129)
                   (paths
-                    wpSantaFeDeTolocoI
-                    SantaFeTrail_TownsendBranch_RobinsonSinks
-                    wpSP8_SantaFeTrail_Robinson
-                    SP_8_CharlesFerry_SanFranciscoDePupa
-                    wpSP8_SantaFeTrail_Latchua
-                    SP_23_PathToLatchua_SantaFeTrail
-                    SantaFeTrail_TownsendBranch_Wachahoota
+                    SP_MainRoute
                   )
+                  (point wpSP8_SantaFeTrail_Latchua  29.835589 -82.520462)
+                )
+                (segment sfTrail_MillCreek_Wachahoota
+                         (paths
+                           SP_23_PathToLatchua_SantaFeTrail
+                           SantaFeTrail_TownsendBranch_Wachahoota
+                         )
                 )
         )
-        (segment
+        (segment sfTrail_spur_MoonLake
           (paths SantaFeTrail_Potano Potano_MoonLake)
         )
 )
 
-(point wpSP8_SantaFeTrail_Robinson 29.859760 -82.521129)
-(point wpSP8_SantaFeTrail_Latchua  29.835589 -82.520462)
 
 (path SantaFeTrail_TownsendBranch_Wachahoota
       (popup "Santa Fe Trail: Townsend Branch to Wachahoota<br>(Johnson 1991)")

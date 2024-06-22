@@ -51,8 +51,10 @@
 
 
    function addItems(group, objectList, parentStyle) {
-      for (var wk = walker(objectList); wk(); ) {
-         addItem(group, wk.value, parentStyle);
+      if (objectList) {
+         for (var wk = walker(objectList); wk(); ) {
+            addItem(group, wk.value, parentStyle);
+         }
       }
    }
 
