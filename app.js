@@ -6,7 +6,7 @@
    var viewport = body.getVisible();
    var h1Height = viewport.height;
 
-   var mapdiv = body.tag('div $=map id=map');
+   var mapdiv = body.tag('div id=map');
    mapdiv.move({height: h1Height});
    var initialZoom = h1Height > 300 ? 13 : 12;
    var initialCenter = [30.405, -84.05];
@@ -47,6 +47,7 @@
    }
 
    var locationController = makeLocationController(map);
+   var infoCtl = makeTextinfoControl(map);
 
 
 
@@ -185,6 +186,151 @@
             iconAnchor: [8, 8],
             className: "marker-text-icon",
          });
+      }
+   }
+
+
+
+   function makeTextinfoControl(map) {
+      L.Control.Textinfo = L.Control.extend({
+         onAdd: function (map) {
+            var svg = body.wrap([':svg svg style=width:48px;height:48px viewport="0 0 48 48"',
+               'circle cx=25 cy=25 r=20 fill=blue',
+               'text font-family=serif font-size=40 font-style=italic fill=white x=20 y=38 _=i'
+            ]);
+            svg.track('click', goToTextinfo);
+            return svg.dom;
+         },
+         onRemove: function (map) {},
+      });
+
+      L.control.textinfo = function (opts) {
+         return new L.Control.Textinfo(opts);
+      }
+
+      L.control.textinfo({position: 'topright'}).addTo(map);
+      return {};
+   }
+
+   function goToTextinfo() {
+      if (!infoCtl.pages) {
+         var ajax = dommy.ajax({method: 'GET'});
+         ajax.request({uri: 'mapinfo.xml'}, {success: receiveData});
+      }
+      else {
+         displayMainPage();
+      }
+
+      function receiveData(response) {
+         if (response.responseXML) {
+            infoCtl.pages = {};
+            for (var wk = walker(response.responseXML.documentElement.children); wk(); ) {
+               var elem = wk.value;
+               if (elem.tagName == 'page') {
+                  infoCtl.pages[elem.id] = elem;
+               }
+            }
+            infoCtl.breadcrumb = [];
+         }
+         displayMainPage();
+      }
+
+      function displayMainPage() {
+         mapdiv.hide();
+         displayPage('main');
+      }
+
+      function displayPage(pageName) {
+         var page = infoCtl.pages[pageName];
+         if (!page) {
+            return
+         }
+         if (!infoCtl.textDiv) {
+            infoCtl.textDiv = body.tag(['div id=textDiv',
+               ['div class=frametop',
+                  ['span $=back',
+                     [':svg svg viewBox="0 0 50 50"',
+                        'polyline stroke=black stroke-width=4 fill=none points="23 10 10 25 23 40"',
+                        'line stroke=black stroke-width=4 x1=12 y1=25 x2=40 y2=25'],
+                     'span $=backText _ Go back'],
+               ],
+               ['div class=framebody $=textTarget']], infoCtl);
+            infoCtl.back.track('click', goBack);
+         }
+         else {
+            infoCtl.textTarget.removeChildren();
+            infoCtl.textDiv.show();
+         }
+         infoCtl.backText.setText('Go back' + (infoCtl.breadcrumb.length ? '' : ' to map'));
+         infoCtl.breadcrumb.push(pageName);
+         renderDocElemChildren(infoCtl.textTarget, page);
+      }
+
+      function goBack() {
+         infoCtl.breadcrumb.pop();
+         if (infoCtl.breadcrumb.length) {
+            var name = infoCtl.breadcrumb.pop();
+            displayPage(name);
+         }
+         else {
+            infoCtl.textDiv.hide();
+            mapdiv.show();
+         }
+      }
+
+      function renderDocElemChildren(target, elem) {
+         for (var wk = walker(elem.childNodes); wk(); ) {
+            var node = wk.value;
+            switch (node.nodeType) {
+               case 1:        // element
+                  renderDocElem(target, node);
+                  break;
+               case 3:        // text node
+               case 4:        // CDATA
+                  target.addText(node.data);
+                  break;
+            }
+         }
+      }
+
+      function renderDocElem(target, elem) {
+         switch (elem.tagName) {
+            case 'linkcol':
+               var col = target.tag('div class=halfColumns');
+               renderDocElemChildren(col, elem)
+               break;
+            case 'link':
+               var link = target.tag('span class=link');
+               renderDocElemChildren(link, elem);
+               var ref = elem.getAttribute('ref');
+               if (ref) {
+                  link.track('click', doc.curry(displayPage, ref));
+               }
+               break;
+            case 'strip':
+               var color = elem.getAttribute('color');
+               target.append([':svg svg viewBox="0 0 150 50"',
+                  'rect @fill=color width=150 height=20 x=0 y=25'
+               ], {color: color});
+               break;
+            case 'h':
+            case 'h2':
+               var node = target.tag({h: 'h2', h2: 'h3'}[elem.tagName]);
+               renderDocElemChildren(node, elem);
+               break;
+            case 'a':
+               var link = target.tag('a target=_blank class=link')
+               link.setAttribute('href', elem.getAttribute('href'))
+               renderDocElemChildren(link, elem);
+               break;
+            case 'br':
+               target.append('br');
+               break;
+            default:
+               var node = target.tag(elem.tagName);
+               renderDocElemChildren(node, elem);
+               break;
+         }
       }
    }
 })();

@@ -2,4 +2,14 @@
         background: transparent;
         border: none;
 }
+div#textDiv {padding: 0; margin: 0}
+div.frametop {border: 1px solid #CCC; padding: 2px 1em}
+div.frametop svg {height: 1.5ex}
+div.framebody {padding: 3px 1em 1ex}
+div.framebody svg {height: 1.6ex}
+
+div.halfColumns {display: inline-block; width: 40%; padding-left: 2em}
+
+.link {color: blue; cursor: pointer}
+dt {margin-top: 1ex}
 

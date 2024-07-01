@@ -19,7 +19,7 @@ clean:
 tar: index.html
 	-rm -rf tardir
 	mkdir tardir
-	cp -p index.html app.js data.js local.css vendor/dommyAll.js tardir
+	cp -p index.html app.js data.js local.css mapinfo.xml vendor/dommyAll.js tardir
 	cp -pr vendor/leaflet/* tardir
 	cd tardir; tar czf ../tar.tar.gz .
 	rm -rf tardir

@@ -1,0 +1,276 @@
+<doc>
+  <page id="main">
+    <h>Map of the Spanish Florida Missions</h>
+    <p>This map is part of an ongoing project to locate the Spanish-period Florida
+      misssions in relation to sites from the 18th and 19th centuries. It deals
+      mostly with roads and trails and the places that these connect.  This map is
+      a work in progress.</p>
+
+    <linkcol>
+      <link ref="roads">Guide to roads on map</link><br/>
+      <link ref="omiss">Overview of mission system</link><br/>
+    </linkcol>
+    <linkcol>
+      <link ref="project">Notes on this project</link><br/>
+      <link ref="privacy">Privacy Policy</link><br/>
+    </linkcol>
+  </page>
+
+  <page id="roads">
+    <h>Guide to roads on map</h>
+    <p>No one among the early Spanish, whether explorers, soldiers, priests, or
+      colonists, left us maps of the mission routes.  We do know that they followed
+      trails that the native people had already made and that later roads followed
+      these paths—more or less.</p>
+    <dl>
+      <dt><i>El Camino Reál</i></dt>
+      <dd>This was the main east-west route from St. Augustine to the Apalachee
+        province during the Spanish period.  Scant direct evidence of this route
+        remains today, but much of it may be inferred from more recent roads.  The
+        route of Bellamy Road, much of which quite evident today, indicates the
+        general route of <i>El Camino Reál</i>, but may not be completely accurate.
+        Joseph Purcell's map, made 50 years before Bellamy Road, showed routes the
+        British used during their time in Florida.  In many places this it seems to
+        follow the Spanish routes more accurately than does Bellamy Road, but this
+        map has its own problems, as noted below.</dd>
+
+      <dt>Bellamy Road / Federal Road (marked in color <strip color="#22AA22"/>)</dt>
+      <dd>Authorized in 1824, this was the first Federal road project in the new
+        Florida territory. It ran from Pensacola to St. Augustine via Ft. St. Louis
+        (San Luís de Talimali) in what is now Tallahassee.  It would appear to be a
+        good proxy for <i>El Camino Reál</i> since the 1824 law specifed that it
+        follow the Spanish routes as nearly as possible.  The road's project
+        manager, Captain John Burch, reported that he followed the Spanish route
+        pretty closely.  Many fragments of this road survive today as evidenced by
+        names like Bellamy Road (for the contractor responsible for more than half
+        the route), St. Augustine Road, or Federal Road.  The difficulty is that
+        the old trails would likely have meandered much more than these modern
+        roads do.  Was it Captain Burch who made them straight, or did others do
+        so in the 200 intervening years?  Also, Bellamy Road made a notable
+        divergence from the Spanish route to pass through the settlement that
+        would become Newnansville, seat of Alachua County; there may be other such
+        excursions, such as detours to avoid seasonally flooded areas of San Pedro
+        Bay.  In any event, Bellamy Road may not be our best proxy for <i>El Camino
+        Reál</i>.
+        <p>In many places Bellamy Road has disappeared from the landscape.  One of
+          these places, ironically, is at Newnansville, where only the old cemetery
+          remains.  Sometimes old maps reveal the path of Bellamy Road, as do old
+          plat maps of Newnansville.  Other old maps, such as Henry Tanner's 1833
+          map, are also of help, if with less detail.</p>
+        <p>The trace of Bellamy Road as shown on the main map is incomplete:  it
+          runs only between Tallahassee and Newnansville.  This is because the
+          route becomes more speculative beyond these endpoints.  There are two
+          limiting factors toward the west: 1. <i>El Camino Reál</i> probably did
+          not extend beyond San Luís mission and 2. Bellamy's contribution to the
+          Federal Road was only east of the Ocklockonee River.</p>
+      </dd>
+
+      <dt>Stuart-Purcell Route (marked in color <strip color="#992299"/>)</dt>
+      <dd>The British, though ruling Florida only 20 years, made several important
+       explorations of the territory.  One was by the surveyor Joseph Purcell, who
+       prepared <i>A Map of the Road from Pensacola to St. Augustine</i>.  This
+       map, of which the 8½-foot wide original is in London, depicts what may be a
+       more true representation of <i>El Camino Reál</i> than does Bellamy Road
+       (Boyd, 1938).  I digitized this map and encountered several problems.  The
+       projection onto the flat sheet of paper does not reflect the curvature of
+       the earth, which is considerable over the map's 5.9 degrees of latitude.
+       It also appears that the dead reckoning he appears to have used had little
+       correction for accumulated error.  These problems led me to have to stretch
+       the very large raster of the Stuart-Purcell map to make it align with
+       well-known locations such as San Luís mission, Charles Ferry, Ichetucknee,
+       and Lake Santa Fé. The greatest problem, however, is that west of Potohiriba
+       in central Madison County the British did not use roads that followed the
+       old <i>Camino Reál</i>.  In this part of the state, it appears better to
+       stick with the Bellamy Road.<br/>
+       <p>The road in the Stuart-Purcell map splits in three places into a
+         northerly and a southerly route.  In all three places the cartographer
+         distinguished between the main and the alternate route.</p>
+       <p>The road on the British map runs within a mile of Bellamy Road for most
+         of the way east of the Suwannee.  In modern Madison and Jefferson counties
+         the roads are separated by up to eight miles.  It is evident that the two
+         later roads followed different primorial paths.  The British followed
+         paths the Seminoles and Miccosukee used—and likely avoided those they did
+         not.  John Lee Williams, in his 1837 book <i>A View of West Florida</i>,
+         wrote this about the route near Tallahassee when he explored there in
+         1823: "At a little south-east of the town...the Indian paths cross this
+         great road [but] never follow it, with almost a religious caution."
+         (p. 33)  The southerly branch of Stuart-Purcell's road runs east of
+         Tallahassee around the north of Lake Lafayette, whereas Bellamy Road ran
+         south of the lake as per Williams' description.  It appears Bellamy Road
+         is correct in this region.</p>
+      </dd>
+
+      <dt>Other mission routes (marked in color <strip color="#BB33AA"/>)</dt>
+      <dd>Some roads are known or supposed to have existed in mission times, such
+        as what Kenneth Johnson in is 1991 disseration calls the Santa Fe Trail,
+        named for the Santa Fé de Toloca mission along it.  Other trails marked in
+        this color serve only to connect mission sites with nearby roads.  Some of
+        these are quite speculative.
+      </dd>
+    </dl>
+
+    <h2>Line thickness and hatching indicate degree of certainty</h2>
+    <p>The thicker and more solid the map trace, the greater degree of confidence.
+      In places where a line on the map is solid and wide, the route in that place
+      is well attested and is still evident in the modern environment.  The source
+      dataset contains indications of types and number of attestations and road
+      conditions for each route.  <i>Misiones</i>, the program which processes the
+      source dataset into a form suitable for display on the map, weighs these
+      factors to determine how each line is presented.</p>
+  </page>
+
+  <page id="omiss">
+    <h>Overview of the Spanish Missions</h>
+    <p>The earliest Spanish explorers in Florida concentrated on the southern
+      Gulf coast, where they clashed with the native Calusa.  Conflict was
+      inevitable:  these explorers were famously zealous of conquest, glory, and
+      riches, while the Calusa, calling themselves the 'fierce people', exacted
+      tribute from all the other tribes of south Florida. The Spanish had very
+      little to show for their efforts in South Florida.</p>
+    <p>The expeditions of Panfilo de Narváez (1528) and Hernándo de Soto (1539)
+      both avoided Calusa territory but failed in their goal of finding fabled
+      riches in the middle of the continent.  The brutality of their tactics,
+      however, served to engender hostility against the Spanish that lasted
+      decades—even among peoples who might otherwise have been more kindly
+      disposed to the Europeans.  This frustrated Spanish settlement and
+      missionary efforts all the way up the peninsula and across the panhandle.
+      The idealistic missionary Luís Cáncer, for example, went in peace in 1549
+      to the Tocobaga at Tampa Bay but was killed on the spot.</p>
+    <p>The place where the Spanish finally had success was the part of Florida that
+      they had ignored and, ironically enough, might have continued to ignore if it
+      weren't for the arrival of the French in that region.  French Hugenots made a
+      settlement on the St. John's River they called Fort Caroline.  The natives in
+      this area were the Saturiwa, part of the Mocama chiefdom, which was one of the
+      many chiefdoms of the Timucua people.  The Timucua ranged over a very large
+      area in north Florida and south Georgia and shared a common culture and
+      language, yet, unlike the Calusa, had no centralized organization.  They were
+      also much less war-like and, crucially, more likely to cooperate with the
+      Europeans.</p>
+    <p>Alarmed by the encroachment of the French, the Spanish king sent Pedro
+      Menéndez de Avilés to Florida to expel the French and set up an outpost to
+      protect Spanish interests.  Menéndez did so in short order and took up his
+      position as the governor of Florida.  Franciscan missionaries soon went forth
+      to visit many of the Timucua chiefdoms.  This became the first step in closer
+      relations with chiefdoms to the north of St. Augustine and into the interior
+      of north Florida.</p>
+    <p>In contrast to the earlier failed attempt to set up a colony at Pensacola
+      Bay, St. Augustine, with the support of the natives in its hinterlands, was
+      able to produce the food needed to sustain itself and export beef and corn.
+      Keeping up this business was one of the greatest concerns of the Spanish in
+      their whole time in Florida.</p>
+    <p>The missionaries and the soldiers and farmers that followed them used the
+      trail network that the natives had used for centuries before them.  The most
+      important of these ran straight west from St. Augustine and continued all the
+      way to the town of Anhaica, in what is now Tallahassee.  We know this route
+      by the name <i>El Camino Reál</i>, the Royal Road, even though the Spanish
+      did not start using this name until the late 17th century.</p>
+    <p>The Spanish economic system in the New World depended heavily on the labor
+      of its native peoples.  The earliest labor system, the <i>encomienda</i>, was
+      especially harsh to peoples such as the Aztec and Inca.  A series of laws,
+      particularly the <i>Leyes Nuevas</i> (New Laws) of 1542, greatly curtailed
+      the use of the <i>encomienda</i>, forbade many abuses, and granted the
+      Indians many rights.  Though not completely observed, these reforms did make
+      the lives of the natives of Florida much better than they could have been.
+      Native labor in Florida normally ran on two levels:  farming or animal
+      husbandry in the hinterlands and direct labor in construction or the portage
+      of goods.  The latter type put more of a strain on the individual laborer:
+      not only was he absent from village and family during his two years of
+      labor service, but the work was strenuous enough to damage the health.</p>
+    <p>More devastating was a force that neither the Europeans nor the Americans
+      understood:  exposure to novel diseases like measles, smallpox, whooping
+      cough, chicken pox, and the plague.  Between overwork and disease the native
+      population declined steadily through the whole mission period.  The effect
+      for any given region was correlated to the length of time the Spanish had
+      dealings with it.</p>
+    <p>These population declines caused a loss of productivity that motivated the
+      Spanish to expand ever westward.  In all cases the missionaries went first.
+      Fr. Baltasár López visited Ayacuto at Ichetucknee Springs a decade before the
+      Spanish established there, and Fr. Martín Prieto went to Ivitachuco a full 25
+      years before the colonization reached that Apalachee town.  The missionaries
+      often remarked on the fervor they often found among the Timucua and
+      Apalachee toward the Christian religion.  At various times the Timucua
+      uprose against the Spanish, but in most of these instances they never harmed
+      the priests.</p>
+    <p>Eventually the Spanish missions continued past the Aucilla River, the
+      western edge of the Timucuans, and spread into the Apalachee lands.  The
+      Apalachee were rather different than the Timucuans:  their government was
+      much more hierarchical, the population density was much higher, their
+      agriculture was more efficient, and their ways were more violent.  Even
+      though de Soto had spent the whole winter in Anhaica, the Spanish worked
+      well with them.  Here they established the largest mission in the whole
+      system, complete with a fort:  San Lúis de Talimali, also known as San
+      Luís de Apalache.</p>
+    <p>The Spanish mission system did not extend far beyond the Apalachee
+      territory, which itself covered only two modern counties (Leon and
+      Jefferson).  In 1702 the English Col. Charles Moore began his attacks on the
+      Spanish Florida.  The English and their Yamasee, Creek, and other Indian
+      allies overwhelmed the Spanish and destroyed their missions.  Even the
+      defensible San Lúis and Ivitachuco could not long hold out; the inhabitants
+      either fled eastward to St. Augustine or joined the invaders.  Interestingly,
+      the very last mission to hold out in the interior of Florida had been the
+      first to be established.  The defenders of San Francisco de Potano finally
+      fled to St. Augustine in 1706.  St. Augustine itself never fell to British
+      arms; the city and its Castillo went over to Britain only as a result of the
+      1763 Treaty of Paris that ended the French and Indian War.  At that time, the
+      inhabitants of St. Augustine, including all the remaining Timucua, evacuated
+      to Havana.</p>
+  </page>
+
+  <page id="project">
+    <h>Overview of the project</h>
+    <p>This project began with a request that I look into the location a Spanish
+      called <i>Aspalaga</i> that was at or near the site of a 19th-century
+      plantation in Jefferson County with a Spanish name, <i>El Destino</i>.  This
+      intrigued me not only because I had an interest in Spanish missions, but also
+      because the plantation appeared to be near Bellamy Road.  Indeed, I found
+      that the plantation straddled the road for some miles and that there were a
+      couple of likely nearby locations for the San Juan de Aspalaga mission.</p>
+    <p>I also found that it was possible to guage the location of long-disappeared
+      missions based on their distances from other missions described in the
+      contemporaneous descriptions of them.  I wanted to place these on the map for
+      two reasons:  to visualize where the were in relation to the others and to
+      measure the distances between them on routes that connected them.</p>
+    <p>I saw the map as a way to visualize the missions in relation to one another
+      as a help into further research.  I have made successive refinements to the
+      map over time and will continue to do so as my research proceeds.</p>
+    <p>A large portion of the work has centered around digitizing historical maps
+      to capture the paths they trace as series of points that consist of
+      latitude/longitude pairs.  A similar approach works to trace the paths of
+      routes that are still visible today.  This can even take the form of tracing
+      the points collected from a GPS receiver while traversing a path.  For
+      tracing maps, whether historic or modern, my tool of choice is the
+      open-source program QGIS.  Whatever the source, the next requirement was to
+      put all the collected map-trace data into a common format.  I designed a
+      custom format paired with a program that consumes this map data and generates
+      a JSON (Javascript Object Notation) file that the map application can load
+      into the browser.</p>
+    <p>The map-display application via which you view the map and read this page
+      has its source code at <a href="https://github.com/potano/elDestino">
+      https://github.com/potano/elDestino</a>.  It uses the Leaflet JS library
+      (<a href="https://leafletjs.com">https://leafletjs.com</a>) to display the
+      map.  The source code for the dataset-processing program, called <i>misiones</i>,
+      is at <a href="https://github.com/potano/misiones"
+      >https://github.com/potano/misiones</a>.</p>
+      <p>—Mike Thompson</p>
+  </page>
+
+  <page id="privacy">
+    <h>Privacy policy</h>
+    <p>This application collects no personally identifiable information nor does it
+      transmit any information to the server beyond what is part of a standard HTTP
+      request.  This application does not use cookies.</p>
+    <p>A planned future enhancement to the program will record the most recently
+      viewed map position plus limited configuration information via your browser's
+      web-storage mechanism.  None of this information will be transmitted to the
+      server.</p>
+    <p>The source code for this Javascript application, the source dataset, and the
+      build script are available for your inspection on GitHub:
+      <a href="https://github.com/potano/elDestino">https://github.com/potano/elDestino</a>
+    </p>
+    <p>The source code for the application that processes the source dataset into a
+      form that that Javascript application can use is also at GitHub:
+      <a href="https://github.com/potano/misiones">https://github.com/potano/misiones</a>
+    </p>
+  </page>
+</doc>
+
