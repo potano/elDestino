@@ -277,4 +277,42 @@
                           (radius 200)
                   )
          )
+
+
+         (feature SanPedroYSanPabloDePataleI
+                  ;San Pedro y San Pablo de Patale
+                  ;Unearthed mission site
+                  (circle PataleIMission
+                          (style indefiniteAreaStyle)
+                          (popup "<b>San Pedro y San Pablo de Patale I</b><br/>"
+                                 "Archeological site added to National Register of"
+                                 " Historic Places in 1972. Presumably this was the"
+                                 " earliest site of this mission, not the one visited"
+                                 " by Bp. Calderón in 1675, which was likely nearer"
+                                 " St. Marks River, perhaps along the route that"
+                                 " became Bellamy Road. That site would seem to be"
+                                 " the site of the terrible massacre of 1704.")
+                          30.467222 -84.150222
+                          (radius 200)
+                  )
+         )
+
+         (feature SanLuisDeTalimaliII
+                  ;San Luís de Talimali
+                  ;Continually attested since its founding
+                  (circle TalimaliII
+                          (style indefiniteAreaStyle)
+                          (popup "<b>San Luís de Talimali</b> (1656-1704)<br/>"
+                                 "Capital of the Apalachee Province.  Unique among"
+                                 " the Spanish missions in the interior of Florida"
+                                 " in that the site was never lost to living memory."
+                                 " The mission moved here from an unknown place to"
+                                 " the east, perhaps near Myers Park.<br/>"
+                                 "Despite its strong fortifications, the site was"
+                                 " abandoned in 1704 in before it could be fully"
+                                 " besieged by the English.")
+                          30.449088 -84.319905
+                          (radius 250)
+                  )
+         )
 )
