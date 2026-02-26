@@ -85,10 +85,10 @@
 ;                                 " along El Camino Real. Destroyed by an English raiding party"
 ;                                 " at the time of the siege of St. Augustine.")
 ;                          (style indefiniteAreaStyle)
-;                          29.809683 -82.486574
+;                          29.896009 -82.564010
 ;                          (radius 250)
 ;                  )
-                  (point wpTolocoII 29.809683 -82.486574)
+                  (point wpTolocoII 29.896009 -82.564010)
          )
 
          (feature SanMartinDeAyaocuto
@@ -101,7 +101,7 @@
                            "Likely home of the <i>holata</i> (chieftain) of the Northern<br/>"
                            "Utina. Mission died in the revolt of 1656.")
                     (style indefiniteAreaStyle)
-                    29.967353 -82.759394
+                    29.976575 -82.757100
                     (radius 200)
                   )
          )

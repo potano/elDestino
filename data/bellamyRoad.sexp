@@ -1,22 +1,28 @@
 ;SPDX-License-Identifier: GPL-2.0-or-later
 (route bellamyRoad
          (style bellamyRoadStyle)
-         (popup "<b>Bellamy Road</b><br>Newnansville to the state capitol")
+         (popup "<b>Bellamy Road</b><br>Melrose to the state capitol")
 
          (segment
-           ;Data digitized in QGIS with trace from topographic map
+           ;Data digitized in QGIS with trace from Alachua County Property Appraiser GIS
            ;Trace around Newnansville conforms with old maps of the town
            ;Data transferred via .geojson file
            (attestation old_map marker high)
-           (paths Bellamy_Newnansville)
+           (paths Bellamy_in_Melrose_Alachua)
+         )
+
+         (segment
+           ;Data digitized from topographic gap with course guided by old maps
+           ;Crucial binding point in center of route: Bellamy Station of the Gainesville & Gulf RR
+           (attestation old_map medium)
+           (paths Bellamy_Melrose_Newnansville)
          )
 
          (segment
            ;Data digitized in QGIS with trace from topographic map
            ;Data transferred via .geojson file
            (attestation old_map)
-           (paths Bellamy_WofNewnansville_AlligatorRoad
-                  Bellamy_Alligator Bellamy_I75 Bellamy_Traxler_OLeno
+           (paths Bellamy_Alligator Bellamy_I75 Bellamy_Traxler_OLeno
                   Bellamy_Alachua_OLeno_Gap Bellamy_OLeno_inAlachua
                   Bellamy_inColumbia)
          )
