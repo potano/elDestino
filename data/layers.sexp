@@ -20,9 +20,9 @@
          (menuitem "Bellamy Road")
          (features bellamyRoad)
   )
-  (layer CentralFloridaRailroadLayer
-         (menuitem "Central Florida Railroad")
-         (features CentralFloridaRailroad)
+  (layer RailroadLayer
+         (menuitem "20th-Centry Railroads")
+         (features CentralFloridaRailroad GainesvilleAndGulfRailway)
   )
 )
 
