@@ -6,8 +6,10 @@
       ;Route in the Alachua County side of Melrose as given or inferred in property-appaiser map
       ;Digitized in QGIS; transferred from bellamySuwanneeSolution.geojson
       (attestation modern_path)
-      29.709694 -82.050246
-      29.709723 -82.053218
+      29.709746 -82.050173
+      29.709750 -82.051223
+      29.709763 -82.052283
+      29.709711 -82.053203
       29.709704 -82.054308
       29.709549 -82.055543
       29.709308 -82.057669

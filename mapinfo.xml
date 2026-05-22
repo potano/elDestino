@@ -25,44 +25,51 @@
     <dl>
       <dt><i>El Camino Reál</i></dt>
       <dd>This was the main east-west route from St. Augustine to the Apalachee
-        province during the Spanish period.  Scant direct evidence of this route
-        remains today, but much of it may be inferred from more recent roads.  The
-        route of Bellamy Road, much of which quite evident today, indicates the
-        general route of <i>El Camino Reál</i>, but may not be completely accurate.
-        Joseph Purcell's map, made 50 years before Bellamy Road, showed routes the
-        British used during their time in Florida.  In many places this it seems to
-        follow the Spanish routes more accurately than does Bellamy Road, but this
-        map has its own problems, as noted below.</dd>
+        province during the Spanish period.  The Spanish did establish a few
+        missions on either side of the Appalachacola River farther west, but since
+        the center of their economic activity was among the Apalachee, <i>El Camino
+        Reál</i> likely ended in modern Leon County.
+        <p>Scant direct evidence of this route remains today, but much of it may be
+         inferred from more recent roads.  The route of Bellamy Road, much of which
+         quite evident today, indicates the general route of <i>El Camino Reál</i>,
+         but may not be completely accurate.  Joseph Purcell's map, made 50 years
+         before the federal road, showed routes the British used from Pensacola to
+         St. Augustine during their time in Florida.  In some places this it seems
+         to follow the Spanish routes more accurately than does Bellamy Road, but
+         this map has its own problems, as noted below.</p>
+      </dd>
 
       <dt>Bellamy Road / Federal Road (marked in color <strip color="#22AA22"/>)</dt>
       <dd>Authorized in 1824, this was the first Federal road project in the new
         Florida territory. It ran from Pensacola to St. Augustine via Ft. St. Louis
-        (San Luís de Talimali) in what is now Tallahassee.  It would appear to be a
-        good proxy for <i>El Camino Reál</i> since the 1824 law specifed that it
-        follow the Spanish routes as nearly as possible.  The road's project
-        manager, Captain John Burch, reported that he followed the Spanish route
-        pretty closely.  Many fragments of this road survive today as evidenced by
-        names like Bellamy Road (for the contractor responsible for more than half
-        the route), St. Augustine Road, or Federal Road.  The difficulty is that
-        the old trails would likely have meandered much more than these modern
-        roads do.  Was it Captain Burch who made them straight, or did others do
-        so in the 200 intervening years?  Also, Bellamy Road made a notable
-        divergence from the Spanish route to pass through the settlement that
-        would become Newnansville, seat of Alachua County; there may be other such
-        excursions, such as detours to avoid seasonally flooded areas of San Pedro
-        Bay.  In any event, Bellamy Road may not be our best proxy for <i>El Camino
-        Reál</i>.
-        <p>In many places Bellamy Road has disappeared from the landscape.  One of
-          these places, ironically, is at Newnansville, where only the old cemetery
-          remains.  Sometimes old maps reveal the path of Bellamy Road, as do old
-          plat maps of Newnansville.  Other old maps, such as Henry Tanner's 1833
-          map, are also of help, if with less detail.</p>
-        <p>The trace of Bellamy Road as shown on the main map is incomplete:  it
-          runs only between Tallahassee and Newnansville.  This is because the
-          route becomes more speculative beyond these endpoints.  There are two
-          limiting factors toward the west: 1. <i>El Camino Reál</i> probably did
-          not extend beyond San Luís mission and 2. Bellamy's contribution to the
-          Federal Road was only east of the Ocklockonee River.</p>
+        (San Luís de Talimali) in what is now Tallahassee.  Its eastern portion
+        would appear to be a good proxy for <i>El Camino Reál</i> since the 1824 law
+        specifed that it follow the Spanish routes as nearly as possible.  The
+        road's project manager, Captain John Burch, reported that he followed the
+        Spanish route pretty closely.  Many fragments of this road survive today as
+        evidenced by names like Bellamy Road, St. Augustine Road, or Federal Road.
+        The name "Bellamy Road" is especially apt: the segments of the route John
+        Bellamy was contracted to build—from the Ocklockonee River to St.
+        Augustine—encompass exactly the route of <i>El Camino Reál.</i>
+        <p>A difficulty with using Bellamy Road as a guide is that while the old
+          trails were walking paths that meandered through the terrain, the modern
+          Bellamy Road runs much more straight.  How much straightening did Captain
+          Burch do?  How many alterations were made in the 200 intervening years?
+        </p>
+        <p>Old maps are a help, but given the limits of surveying and cartography,
+          are often inaccurate.  The do help in finding the route in places where
+          the road has disappeared from the landscape.  One such instance is in
+          eastern Madison County, where old maps depict the road as taking a
+          pronounced loop to the north to evade marshy areas of San Pedro Bay.  The
+          motivation for using that loop in this map was the existence of an Old
+          Saint Augustine Way where this loop crossed the modern Interstate 10.
+        </p>
+        <p>Two parts of the route of Bellamy Road on this map are speculative:
+          Suwannee county between Ichetucknee and Baptizing Spring and Alachua
+          County between Melrose and Newnansville.  Also, two parts of the route are
+          yet to be filled in: Ocklockonee to the State Capitol and Picolata to St.
+          Augustine.
+        </p>
       </dd>
 
       <dt>Stuart-Purcell Route (marked in color <strip color="#992299"/>)</dt>
@@ -73,7 +80,7 @@
        more true representation of <i>El Camino Reál</i> than does Bellamy Road
        (Boyd, 1938).  I digitized this map and encountered several problems.  The
        projection onto the flat sheet of paper does not reflect the curvature of
-       the earth, which is considerable over the map's 5.9 degrees of latitude.
+       the earth, which is considerable over the map's 5.9 degrees of longitude.
        It also appears that the dead reckoning he appears to have used had little
        correction for accumulated error.  These problems led me to have to stretch
        the very large raster of the Stuart-Purcell map to make it align with

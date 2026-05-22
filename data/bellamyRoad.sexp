@@ -1,7 +1,45 @@
 ;SPDX-License-Identifier: GPL-2.0-or-later
 (route bellamyRoad
          (style bellamyRoadStyle)
-         (popup "<b>Bellamy Road</b><br>Melrose to the state capitol")
+         (popup "<b>Bellamy Road</b><br>St. John's River to the state capitol")
+
+         (segment Bellamy_Clay_County
+           ;Data digitized in QGIS from topographic map plus Open Street Map
+           ;Data transferred via .geojson file
+           (paths Bellamy_Bayard_WMA
+                  Bellamy_CR2095_FEC
+                  Bellamy_FEC_CR226
+                  Bellamy_CR226_to_LittleRuthRoad
+                  Bellamy_LittleRuthRoad
+                  Bellamy_between_LittleRuthRoad_US17
+                  Bellamy_west_from_US17
+                  Bellamy_dirt_to_ScrewWormRoad
+                  Bellamy_ScrewWormRoad
+                  Bellamy_ScrewWorm_to_Moody
+                  Bellamy_Moody_to_Mine
+                  Bellamy_through_Strip_Mine
+                  Bellamy_topo_East_of_Mine
+                  Bellamy_north_of_SunGardenRoad)
+         )
+
+         (segment Bellamy_Clay_Putnam_county_line
+           ;Data digitized in QGIS from topographic map plus Open Street Map
+           ;Data transferred via .geojson file
+           (paths Bellamy_Belmore
+                  Bellamy_parallel_CR315C
+                  Bellamy_county_line_near_SR100
+                  Bellamy_Clay_County_Takeover
+                  Bellamy_Swan_Lake
+                  Bellamy_CR2_county_line)
+         )
+
+         (segment Bellamy_Putnam_County
+           ;Data digitized in QGIS from topographic map plus Open Street Map
+           ;Data transferred via .geojson file
+           (paths Bellamy_CR2_Putnam
+                  Bellamy_cut_CR2_SR26_corner
+                  Bellamy_in_Melrose_Putnam)
+         )
 
          (segment
            ;Data digitized in QGIS with trace from Alachua County Property Appraiser GIS
@@ -12,7 +50,7 @@
          )
 
          (segment
-           ;Data digitized from topographic gap with course guided by old maps
+           ;Data digitized from topographic map with course guided by old maps
            ;Crucial binding point in center of route: Bellamy Station of the Gainesville & Gulf RR
            (attestation old_map medium)
            (paths Bellamy_Melrose_Newnansville)
